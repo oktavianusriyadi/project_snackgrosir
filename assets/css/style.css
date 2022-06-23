@@ -1,0 +1,50 @@
+  /*NavBar*/
+  .navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+  }
+
+  .nav-link {
+    font-family: 'Ubuntu', sans-serif;
+    margin-inline-start: 3px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: medium;
+  }
+
+  .VCartCkOut{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: medium;
+    color: black;
+  }
+
+  /* End NavBar */
+
+  /* Banner */
+  .banner {
+    margin-bottom: 2rem;
+  }
+  /* End Banner */
+
+  /* Content */
+  .detail,
+  .detail:hover {
+    color: black;
+    text-decoration: none;
+  }
+
+  .nampro {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 100%;
+  }
+
+  .harga {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    color: black;
+    position: relative;
+  }
+  /* End Content */
