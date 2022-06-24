@@ -38,33 +38,6 @@
   <div class="container-fluid">
     <a class="navbar-brand text-black-50 text-uppercase" href="<?php echo base_url('Beranda') ?>">Snack Grosir</a>
     <div class="order-lg-2 nav-btns">
-      <!-- User -->
-      <?php if ($this->session->userdata('email') == "") { ?>
-        <a class="btn" style="margin-left: 5px;" href="<?php echo base_url('Pelanggan/register') ?>">
-          Login/Register
-        </a>
-      <?php } else { ?>
-        <a class="btn" style="margin-left: 5px;" href="javascript:void(0);" data-bs-toggle="dropdown">Nama Pelanggan</a>
-        <ul class="dropdown-menu dropdown-menu-end shadow" style="margin-right: 50px;">
-          <li>
-            <a class="dropdown-item" href="#">
-              <i class="bx bx-user me-2"></i>
-              <span class="align-middle">My Profile</span>
-            </a>
-          </li>
-          <li>
-            <div class=" dropdown-divider">
-            </div>
-          </li>
-          <li>
-            <a class="dropdown-item" href="auth-login-basic.html">
-              <i class="bx bx-power-off me-2"></i>
-              <span class="align-middle">Log Out</span>
-            </a>
-          </li>
-        </ul>
-      <?php  } ?>
-      <!-- End Of User -->
       <!-- Cart -->
       <?php
       $keranjang = $this->cart->contents();
@@ -150,6 +123,47 @@
         </div>
       </div>
       <!-- End of Cart -->
+      <!-- User -->
+      <a class="btn" href="javascript:void(0);" data-bs-toggle="dropdown">
+        <i class="fas fa-user"></i>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end shadow">
+        <li>
+          <a class="dropdown-item" href="#">
+            <div class="d-flex">
+              <div class="flex-shrink-0 me-3">
+                <div class="avatar avatar-online">
+                  <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                </div>
+              </div>
+              <div class="flex-grow-1">
+                <span class="fw-semibold d-block">John Doe</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <div class="dropdown-divider">
+          </div>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">
+            <i class="bx bx-user me-2"></i>
+            <span class="align-middle">My Profile</span>
+          </a>
+        </li>
+        <li>
+          <div class=" dropdown-divider">
+          </div>
+        </li>
+        <li>
+          <a class="dropdown-item" href="auth-login-basic.html">
+            <i class="bx bx-power-off me-2"></i>
+            <span class="align-middle">Log Out</span>
+          </a>
+        </li>
+      </ul>
+      <!-- End Of User -->
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -159,14 +173,14 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
       </form>
-      <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" style="color: black;" href="<?php echo base_url('Pelanggan') ?>">Login/Register</a>
-        </li>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" style="color: black;" href="<?php echo base_url('Login/regis') ?>">Daftar</a>
         </li>
-      </ul> -->
+        <li class="nav-item">
+          <a class="nav-link" style="color: black;" href="<?php echo base_url('login') ?>">Log In</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

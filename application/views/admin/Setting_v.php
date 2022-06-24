@@ -54,8 +54,14 @@
                             <label class="form-label"><strong>Alamat Toko</strong></label>
                             <input type="text" name="alamat_toko" value="<?php echo $setting->alamat_toko ?>" class="form-control" required>
                           </div>
-                          <a href="<?php echo base_url('admin/Admin'); ?>" class="btn btn-secondary">Kembali</a>
-                          <button type="submit" class="btn btn-primary">Simpan</button>
+                          <section>
+                            <div class="row">
+                              <div class="text-lg-end">
+                                <a href="<?php echo base_url('admin/Admin'); ?>" class="btn btn-secondary">Kembali</a>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
+                              </div>
+                            </div>
+                          </section>
                         </form>
                       </div>
                     </div>

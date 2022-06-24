@@ -65,7 +65,7 @@
 <!-- //Up Button -->
 
 <footer class="footer text-center text-muted shadow-lg bg-body rounded-top">
-  <div class="container border-bottom p-3">
+  <div class="container border-bottom p-5">
     <section>
       <div class="row text-center justify-content-center">
         <div class="col-md-2 col-4">
