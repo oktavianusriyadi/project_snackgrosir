@@ -13,7 +13,7 @@
                   <?php
                   if ($this->session->flashdata('pesan')) {
                     echo '<div class="alert alert-dark alert-dismissible mb-4" role="alert">
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
                     echo $this->session->flashdata('pesan');
                     echo '</div>';
                   }
