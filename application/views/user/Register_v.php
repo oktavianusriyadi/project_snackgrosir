@@ -5,41 +5,48 @@
       <!-- Register Card -->
       <div class="card shadow" style="max-width: 400px;">
         <div class="card-body">
-          <h4 class="mb-2">Adventure starts here 🚀</h4>
-          <p class="mb-4">Make your app management easy and fun!</p>
+          <h4 class="mb-4 text-center">Daftar Di Snack Grosir</h4>
 
-          <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
-              <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" autofocus />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
-            </div>
-            <div class="mb-3 form-password-toggle">
-              <label class="form-label" for="password">Password</label>
-              <div class="input-group input-group-merge">
-                <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
-                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-              </div>
-            </div>
-            <div class="mb-3">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
-                <label class="form-check-label" for="terms-conditions">
-                  I agree to
-                  <a href="javascript:void(0);">privacy policy & terms</a>
-                </label>
-              </div>
-            </div>
-            <button class="btn btn-primary d-grid w-100">Sign up</button>
-          </form>
+          <?php
+          echo validation_errors('<div class="alert alert-primary alert-dismissible" role="alert">
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>', '</div>');
 
+          if ($this->session->flashdata('pesan')) {
+            echo '<div class="alert alert-dark alert-dismissible mb-4" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+            echo $this->session->flashdata('pesan');
+            echo '</div>';
+          }
+
+          echo form_open('Pelanggan/register') ?>
+          <div class="mb-3">
+            <label for="username" class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" name="nama_pelanggan" value="<?php echo set_value('nama_pelanggan') ?>" placeholder="Nama Lengkap" autofocus />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" name="email" value="<?php echo set_value('email') ?>" placeholder="Enter your email" />
+          </div>
+          <div class="mb-3 form-password-toggle">
+            <label class="form-label" for="password">Password</label>
+            <div class="input-group input-group-merge">
+              <input type="password" class="form-control" name="password" value="<?php echo set_value('password') ?>" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+              <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+            </div>
+          </div>
+          <div class="mb-3 form-password-toggle">
+            <label class="form-label" for="password">Konfirmasi Password</label>
+            <div class="input-group input-group-merge">
+              <input type="password" class="form-control" name="konfirmasi_password" value="<?php echo set_value('konfirmasi_password') ?>" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+              <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+            </div>
+          </div>
+          <button class="btn btn-primary d-grid w-100">Daftar</button>
+          <?php echo form_close() ?>
           <p class="text-center">
-            <span>Already have an account?</span>
+            <span>Sudah Punya akun?</span>
             <a href="auth-login-basic.html">
-              <span>Sign in instead</span>
+              <span>Login</span>
             </a>
           </p>
         </div>

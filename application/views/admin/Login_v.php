@@ -101,7 +101,7 @@
               </div>
             </div>
             <div class="mb-3">
-              <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+              <button class="btn btn-primary d-grid w-100" type="submit">Login</button>
             </div>
             <?php echo form_close() ?>
           </div>
@@ -122,6 +122,14 @@
 
   <script src="<?php echo base_url('assets/vendor/js/menu.js') ?>"></script>
   <!-- endbuild -->
+
+  <script>
+    window.setTimeout(function() {
+      $(".alert").fadeTo(500.0).slideUp(500, function() {
+        $(this).remove();
+      });
+    }, 3000)
+  </script>
 
   <!-- Main JS -->
   <script src="<?php echo base_url('assets/js/main.js') ?>"></script>

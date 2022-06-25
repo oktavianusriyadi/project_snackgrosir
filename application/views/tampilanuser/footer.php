@@ -137,7 +137,16 @@
   });
 </script>
 <!-- End Notifications Cart -->
+<script>
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500.0).slideUp(500, function() {
+      $(this).remove();
+    });
+  }, 3000)
+</script>
 
+<!-- Main JS -->
+<script src="<?php echo base_url('assets/js/main.js') ?>"></script>
 <!--CSS-->
 <style>
   .footer {
