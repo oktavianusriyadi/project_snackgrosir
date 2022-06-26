@@ -30,12 +30,12 @@
           echo form_open('Pelanggan/login'); ?>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="text" class="form-control" name="email" value="<?php echo set_value('email') ?>" placeholder="Enter your email" />
+            <input type="text" class="form-control" name="email" value="<?php echo set_value('email') ?>" />
           </div>
           <div class="mb-3 form-password-toggle">
             <label class="form-label" for="password">Password</label>
             <div class="input-group input-group-merge">
-              <input type="password" class="form-control" name="password" value="<?php echo set_value('password') ?>" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+              <input type="password" class="form-control" name="password" value="<?php echo set_value('password') ?>" aria-describedby="password" />
               <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
             </div>
           </div>

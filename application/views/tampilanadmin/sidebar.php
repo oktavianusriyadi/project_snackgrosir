@@ -36,7 +36,7 @@ $this->user_login->proteksi_hal();
   <link rel="stylesheet" href="<?php echo base_url('assets/vendor/libs/apex-charts/apex-charts.css') ?>">
 
   <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <!-- // -->
 
   <!-- Page CSS -->

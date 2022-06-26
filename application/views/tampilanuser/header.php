@@ -29,7 +29,7 @@
   <!-- End Bootstrap JS -->
 
   <!-- JQuery -->
-  <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <!-- End JQuery -->
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-md-6">
                   <h6>
-                    <a class="btn btn-outline-info text-decoration-none" style="color: black;" href="">
+                    <a class="btn btn-outline-info text-decoration-none" style="color: black;" href="<?php echo base_url('Belanja/checkout') ?>">
                       Check Out
                     </a>
                   </h6>
