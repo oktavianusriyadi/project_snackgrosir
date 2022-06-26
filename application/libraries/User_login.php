@@ -25,7 +25,7 @@ class User_login
       $this->ci->session->set_userdata('level_user', $level_user);
       redirect('admin/admin');
     } else {
-      $this->ci->session->set_flashdata('error', 'Usernama Atau Password Salah!');
+      $this->ci->session->set_flashdata('error', 'Username Atau Password Salah!');
       redirect('admin/Auth/login_admin');
     }
   }

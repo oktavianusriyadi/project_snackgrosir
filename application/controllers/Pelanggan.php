@@ -11,6 +11,7 @@ class Pelanggan extends CI_Controller
     parent::__construct();
     //Load Dependencies
     $this->load->model('Pelanggan_m');
+    $this->load->model('admin/Auth_m');
   }
 
   // List all your items
@@ -53,19 +54,38 @@ class Pelanggan extends CI_Controller
     }
   }
 
-  // Add a new item
-  public function add()
+  public function login()
   {
+    $this->form_validation->set_rules('email', 'E-mail', 'required', array(
+      'required' => '%s Harus Diisi !'
+    ));
+    $this->form_validation->set_rules('password', 'Password', 'required', array(
+      'required' => '%s Harus Diisi !'
+    ));
+
+    if ($this->form_validation->run() == TRUE) {
+      $email = $this->input->post('email');
+      $password = $this->input->post('password');
+      $this->pelanggan_login->login($email, $password);
+    }
+    $this->load->view('tampilanuser/header');
+    $this->load->view('user/Login_pelanggan');
+    $this->load->view('tampilanuser/footer');
   }
 
-  //Update one item
-  public function update($id = NULL)
+  public function logout()
   {
+    $this->pelanggan_login->logout();
   }
 
-  //Delete one item
-  public function delete($id = NULL)
+  public function akun()
   {
+    //proteksi halaman
+    $this->pelanggan_login->proteksi_hal();
+    //
+    $this->load->view('tampilanuser/header');
+    $this->load->view('user/Akun_v');
+    $this->load->view('tampilanuser/footer');
   }
 }
 

@@ -30,7 +30,7 @@
   <!--EndBanner-->
 
   <!-- Navbar Kategori -->
-  <nav class="navbar navbar-expand-lg shadow navbar-light bg-light mb-3">
+  <nav class="navbar navbar-expand-lg shadow navbar-light mb-3" style="background-color: rgb(230, 230, 230);">
     <div class="container-fluid">
       <div class="navbar-brand text-black text-uppercase">Kategori</div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#kategori" aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">

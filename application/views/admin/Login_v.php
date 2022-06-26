@@ -61,7 +61,7 @@
             echo validation_errors('<div class="alert alert-primary alert-dismissible" role="alert">
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>', '</div>');
 
-            //Pesan belum login
+            //Belum Login Atau Username & Password Salah
             if ($this->session->flashdata('error')) {
               echo '<div class="alert alert-primary alert-dismissible" role="alert">
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';

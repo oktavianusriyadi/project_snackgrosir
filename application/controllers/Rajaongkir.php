@@ -52,7 +52,7 @@ class Rajaongkir extends CI_Controller
       // print_r($array_response['rajaongkir']['results']);
       // echo '</pre>';
       $data_provinsi = $array_response['rajaongkir']['results'];
-      echo "<option value=''>--- Pilih Provinsi ---</option>";
+      echo "<option value=''>Pilih Provinsi</option>";
       foreach ($data_provinsi as $key => $value) {
         echo "<option value='" . $value['province_id'] . "' id_provinsi='" . $value['province_id'] . "'>" . $value['province'] . "</option>";
       }
@@ -88,27 +88,22 @@ class Rajaongkir extends CI_Controller
     } else {
       $array_response = json_decode($response, TRUE);
       $data_kota = $array_response['rajaongkir']['results'];
-      echo "<option value=''>--- Pilih Kota ---</option>";
+      echo "<option value=''>Pilih Kota</option>";
       foreach ($data_kota as $key => $value) {
         echo "<option value='" . $value['city_id'] . "'>" . $value['city_name'] . "</option>";
       }
     }
   }
 
-  // Add a new item
-  public function add()
+  public function expedisi()
   {
+    echo '<option value="">Pilih Expedisi</option>';
+    echo '<option value="jne">JNE</option>';
+    echo '<option value="tiki">TIKI</option>';
+    echo '<option value="pos">POS Indonesia</option>';
+
   }
 
-  //Update one item
-  public function update($id = NULL)
-  {
-  }
-
-  //Delete one item
-  public function delete($id = NULL)
-  {
-  }
 }
 
 /* End of file Rajaongkir.php */

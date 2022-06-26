@@ -15,8 +15,10 @@
             <th class="text-center">Action</th>
           </tr>
           <?php $i = 1; ?>
+
           <?php
           $tot_berat = 0;
+
           foreach ($this->cart->contents() as $items) {
             $produk = $this->Beranda_m->detail_produk($items['id']);
             $berat = $items['qty'] * $produk->berat;
@@ -66,7 +68,7 @@
             <div class="text-lg-end">
               <button type="submit" class="btn btn-primary">Update Cart</button>
               <a href="<?php echo base_url('Belanja/delete_all') ?>" class="btn btn-danger">Hapus Semua</a>
-              <a type="submit" class="btn btn-secondary">Check Out</a>
+              <a href="<?php echo base_url('Belanja/checkout') ?>" class="btn btn-secondary">Check Out</a>
             </div>
           </div>
         </section>
