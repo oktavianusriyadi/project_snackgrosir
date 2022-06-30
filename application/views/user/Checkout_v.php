@@ -5,19 +5,9 @@
       <div class="card mb-4">
         <div class="card-header d-flex align-items-center justify-content-between">
           <h5 class="mb-0 fw-bold">Check Out</h5>
-          <small class="text-muted float-end">Tanggal</small>
+          <small class="text-muted float-end">Tanggal : <?php echo date('d - m - Y') ?></small>
         </div>
         <div class="card-body">
-          <div class="row">
-            <div class="col-md-6">
-              From :
-            </div>
-            <div class="col-md-6">
-              <div class="float-end">
-                Invoice
-              </div>
-            </div>
-          </div>
           <div class="row">
             <div class="col-md-12">
               <table class="table table-striped">
@@ -51,11 +41,43 @@
               </table>
             </div>
           </div>
+          <hr>
+          <?php
+          //Notifikasi Form Kosong
+          echo validation_errors('<div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>', '</div>');
+          echo form_open('Belanja/checkout');
+          $no_order = date('dmy') . strtoupper(random_string('alnum', 8));
+          ?>
           <div class="row">
             <div class="col-md-8">
               <p><strong>Tujuan Pengiriman : </strong></p>
               <hr>
               <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><strong>Nama Penerima</strong></label>
+                    <input name="nama_penerima" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label class="form-label"><strong>No. Telepon</strong></label>
+                    <input name="no_tlp_penerima" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="mb-3">
+                    <label class="form-label"><strong>Alamat</strong></label>
+                    <textarea name="alamat" class="form-control" rows="1" placeholder="Alamat" required></textarea>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="mb-3">
+                    <label class="form-label"><strong>Kode POS</strong></label>
+                    <input name="kode_pos" class="form-control" placeholder="Kode Pos" required>
+                  </div>
+                </div>
                 <div class="col-md-6">
                   <div class="mb-3">
                     <label class="form-label"><strong>Provinsi</strong></label>
@@ -80,12 +102,6 @@
                     <select name="paket" class="form-select"></select>
                   </div>
                 </div>
-                <div class="col-md-12">
-                  <div class="mb-3">
-                    <label class="form-label"><strong>Alamat</strong></label>
-                    <input type="text" class="form-control" placeholder="Alamat">
-                  </div>
-                </div>
               </div>
             </div>
             <div class="col-md-4">
@@ -94,7 +110,7 @@
               <div class="table-responsive">
                 <table class="table">
                   <tr>
-                    <th>Subtotal</th>
+                    <th>Grand Total</th>
                     <th>Rp <?php echo number_format($this->cart->total(), 0); ?></th>
                   </tr>
                   <tr>
@@ -113,17 +129,35 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <!-- Simpan Transaksi -->
+          <input name="no_order" value="<?php echo $no_order; ?>" hidden>
+          <input name="estimasi" hidden>
+          <input name="ongkir" hidden> <br>
+          <input name="berat" value="<?php echo $tot_berat; ?>" hidden>
+          <input name="grand_total" value="<?php echo $this->cart->total() ?>" hidden>
+          <input name="total_bayar" hidden>
+          <!-- //Simpan Transaksi -->
+
+          <!-- Rinci Transaksi -->
+          <?php
+          $i = 1;
+          foreach ($this->cart->contents() as $items) {
+            echo
+            form_hidden('qty' . $i++, $items['qty']);
+          }
+          ?>
+
+          <!-- //Rinci Transaksi -->
+          <div class="row float-end">
             <div class="col-md-12">
               <a href="<?php echo base_url('Belanja') ?>" class="btn btn-info">
                 <strong>Keranjang</strong>
               </a>
-              <button class="btn btn-secondary float-end">
-                <strong>Check Out</strong>
-              </button>
+              <button type="submit" class="btn btn-secondary">Check Out</button>
             </div>
           </div>
         </div>
+        <?php echo form_close() ?>
       </div>
     </div>
   </div>
@@ -198,6 +232,14 @@
           ribuan_bayar = reverse.match(/\d{1,3}/g);
         ribuan_bayar = ribuan_bayar.join(',').split('').reverse().join('');
         $("#total_bayar").html(ribuan_bayar);
+
+        //estimasi dan ongkir
+        var estimasi = $("option:selected", this).attr('estimasi');
+        $("input[name = estimasi]").val(estimasi);
+        $("input[name = ongkir]").val(data_ongkir);
+        $("input[name = total_bayar]").val(total_bayar);
       });
+
+
     });
   </script>

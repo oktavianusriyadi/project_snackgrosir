@@ -40,20 +40,22 @@
                 echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
                 ?>
 
-                <div class="card produk shadow bg-body rounded" style="max-height: 550px;">
-                  <img src="<?php echo base_url('assets/imgcover/' . $value->gambar) ?>" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title nampro mb-1 text-center"><?php echo $value->nama_produk ?></h6>
-                    <section class="text-center">
-                      <h5 class="harga mb-2">Rp. <?php echo number_format($value->harga, 0) ?></h5>
-                    </section>
+                <a href="<?php echo base_url('Beranda/detail_produk/' . $value->id_produk); ?>" class="detail">
+                  <div class="card produk shadow bg-body rounded" style="max-height: 550px;">
+                    <img src="<?php echo base_url('assets/imgcover/' . $value->gambar) ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="card-title nampro mb-1 text-center"><?php echo $value->nama_produk ?></h6>
+                      <p></p>
+                      <section class="text-center">
+                        <h5 class="harga">Rp. <?php echo number_format($value->harga, 0) ?></h5>
+                      </section>
+                    </div>
+                    <div class="card-body text-center">
+                      <button type="submit" class="btn btn-danger btn-sm swalDefaultSuccess"><i class="fas fa-shopping-cart"></i></button>
+                      <button class="btn btn-primary btn-sm">Beli</button>
+                    </div>
                   </div>
-                  <div class="card-body text-center">
-                    <a href="<?php echo base_url('Beranda/detail_produk/' . $value->id_produk); ?>" class="btn btn-secondary btn-sm"><i class="fas fa-search-plus"></i></a>
-                    <button type="submit" class="btn btn-danger btn-sm swalDefaultSuccess"><i class="fas fa-shopping-cart"></i></button>
-                    <button class="btn btn-primary btn-sm">Beli</button>
-                  </div>
-                </div>
+                </a>
                 <?php echo form_close(); ?>
               </div>
             <?php } ?>

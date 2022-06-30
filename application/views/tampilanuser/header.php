@@ -18,7 +18,7 @@
   <!-- End Bootstrap CSS -->
 
   <!-- Style.css -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css') ?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/vendor/css/pages/page-auth.css') ?>" />
   <!-- End Style.css -->
 
@@ -148,7 +148,7 @@
               <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
               Akun Saya
             </a>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" href="<?php echo base_url('Pesanan_saya') ?>">
               <i class="fas fa-shopping-bag fa-sm fa-fw mr-2 text-gray-400"></i>
               Pesanan Saya
             </a>

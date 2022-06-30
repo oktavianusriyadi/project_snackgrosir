@@ -65,30 +65,16 @@
 <!-- //Up Button -->
 
 <footer class="footer text-center text-muted shadow-lg bg-body rounded-top">
-  <div class="container border-bottom p-5">
+  <div class="container border-bottom p-4">
     <section>
       <div class="row text-center justify-content-center">
-        <div class="col-md-2 col-4">
-          <h6 class="text-uppercase font-weight-bold">
-            <a href="#" style="text-decoration: none; color: black;">About Us</a>
-          </h6>
-        </div>
-        <div class="col-md-2 col-4">
-          <h6 class="text-uppercase font-weight-bold">
-            <a href="<?php echo base_url('snack') ?>" style="text-decoration: none; color: black;">Products</a>
-          </h6>
-        </div>
-        <div class="col-md-2 col-4">
-          <h6 class="text-uppercase font-weight-bold">
-            <a href="#" style="text-decoration: none; color: black;">Contact</a>
-          </h6>
-        </div>
+        <h2>Snack Grosir Pontianak</h2>
       </div>
     </section>
   </div>
 
+
   <section class="alamat text-center">
-    <h2>Snack Grosir Pontianak</h2>
     <p><i class="fas fa-store"></i> Jl. Camar No. 85A, Mariana, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat 78112 </p>
     <p><i class="fas fa-store"></i> Gg. Kakak Tua No. 1, Mariana, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat 78244 </p>
   </section>

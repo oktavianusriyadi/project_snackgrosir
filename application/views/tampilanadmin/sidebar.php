@@ -91,17 +91,9 @@ $this->user_login->proteksi_hal();
             </a>
           </li>
 
-          <!-- Gambar -->
-          <li class="menu-item">
-            <a href="<?php echo base_url('Gambar') ?>" class="menu-link">
-              <i class='menu-icon tf-icon bx bx-image'></i>
-              <div data-i18n="Form Elements">Gambar Produk</div>
-            </a>
-          </li>
-
           <!-- Pesanan -->
           <li class="menu-item">
-            <a href="<?php echo base_url('admin/Pesanan') ?>" class="menu-link">
+            <a href="#" class="menu-link">
               <i class='menu-icon tf-icon bx bx-package'></i>
               <div data-i18n="Form Elements">Data Pesanan</div>
             </a>
