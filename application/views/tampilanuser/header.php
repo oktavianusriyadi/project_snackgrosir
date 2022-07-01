@@ -137,13 +137,13 @@
           <a class="btn" style="margin-left: 5px;" href="javascript:void(0);" data-bs-toggle="dropdown">
             <!-- <h6>Hi, <?php echo $this->session->userdata('nama_pelanggan') ?></h6> -->
             <i class="bx bxs-user-circle bx-sm"></i>
-            <!-- <img class="rounded-circle" src="<?php echo base_url('assets/foto/' . $this->session->userdata('foto')) ?>"> -->
             <span class="avatar-status bg-danger"></span>
           </a>
           <div class="dropdown-menu dropdown-menu-end shadow" style="margin-right: 50px;">
             <a class="dropdown-item" href="#">
               <?php echo $this->session->userdata('nama_pelanggan') ?>
             </a>
+            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="<?php echo base_url('Pelanggan/akun') ?>">
               <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
               Akun Saya
@@ -151,10 +151,6 @@
             <a class="dropdown-item" href="<?php echo base_url('Pesanan_saya') ?>">
               <i class="fas fa-shopping-bag fa-sm fa-fw mr-2 text-gray-400"></i>
               Pesanan Saya
-            </a>
-            <a class="dropdown-item" href="#">
-              <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-              Settings
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="<?php echo base_url('Pelanggan/logout'); ?>" data-toggle="modal" data-target="#logoutModal">

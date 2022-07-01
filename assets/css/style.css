@@ -26,6 +26,13 @@
   }
   /* End Banner */
 
+  /* Tab */
+  .btntab{
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+  }
+  /* //Tab */
+  
   /* Content */
   .detail,
   .detail:hover {

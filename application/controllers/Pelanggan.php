@@ -75,6 +75,7 @@ class Pelanggan extends CI_Controller
 
   public function logout()
   {
+    // $this->cart->destroy();
     $this->pelanggan_login->logout();
   }
 

@@ -41,7 +41,6 @@
               </table>
             </div>
           </div>
-          <hr>
           <?php
           //Notifikasi Form Kosong
           echo validation_errors('<div class="alert alert-danger alert-dismissible" role="alert">

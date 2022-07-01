@@ -13,6 +13,16 @@ class Transaksi_m extends CI_Model
   {
     $this->db->insert('tb_rinci_transaksi', $data_rinci);
   }
+
+  public function belum_bayar()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_transaksi');
+    $this->db->where('status_bayar=0');
+    $this->db->where('id_pelanggan', $this->session->userdata('id_pelanggan')); //untuk filter id_pelanggan saat di pesanan saya
+    $this->db->order_by('id_transaksi', 'desc');
+    return $this->db->get()->result();
+  }
 }
 
 /* End of file Transaksi_m.php */
