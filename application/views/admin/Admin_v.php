@@ -1,4 +1,4 @@
-          <!-- Content wrapper -->
+        <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
@@ -100,21 +100,4 @@
               </div>
             </div>
             <!-- / Content -->
-
-            <!-- CSS -->
-            <style>
-              .card-title {
-                font-weight: bold;
-                font-family: 'Ubuntu', sans-serif;
-              }
-
-              .bx,
-              .total {
-                color: black;
-              }
-
-              .cardD:hover {
-                background-color: lightcyan;
-              }
-            </style>
-            <!-- //CSS -->
+            

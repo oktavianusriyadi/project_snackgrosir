@@ -30,6 +30,7 @@ $this->user_login->proteksi_hal();
   <link rel="stylesheet" href="<?php echo base_url('assets/vendor/css/core.css') ?>" class="template-customizer-core-css">
   <link rel="stylesheet" href="<?php echo base_url('assets/vendor/css/theme-default.css') ?>" class="template-customizer-theme-css">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/demo.css') ?>" />
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/admin.css') ?>" />
 
   <!-- Vendors CSS -->
   <link rel="stylesheet" href="<?php echo base_url('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') ?>">
@@ -93,7 +94,7 @@ $this->user_login->proteksi_hal();
 
           <!-- Pesanan -->
           <li class="menu-item">
-            <a href="#" class="menu-link">
+            <a href="<?php echo base_url('admin/Pesanan') ?>" class="menu-link">
               <i class='menu-icon tf-icon bx bx-package'></i>
               <div data-i18n="Form Elements">Data Pesanan</div>
             </a>
@@ -133,20 +134,4 @@ $this->user_login->proteksi_hal();
         </ul>
       </aside>
       <!-- / Menu -->
-
-      <!-- CSS -->
-      <style>
-        .menu-item:hover {
-          transform: scale(1.1);
-          background-color: lightskyblue;
-        }
-
-        .menu-item {
-          font-family: 'Ubuntu', sans-serif;
-          font-size: medium;
-        }
-      </style>
-      <!-- //CSS -->
-
-      <!-- Layout container -->
-      <div class="layout-page">
+      

@@ -84,7 +84,7 @@ class Produk extends CI_Controller
       $config['allowed_types'] = 'gif|jpg|jpeg|png';
       $config['max_size']     = '2000';
       $this->upload->initialize($config);
-      $field_name = "gambar";
+      $field_name = 'gambar';
       if (!$this->upload->do_upload($field_name)) {
         $this->session->set_flashdata('erorr_upload', 'Ukuran Gambar Terlalu Beesar Max. 2Mb!');
       } else {

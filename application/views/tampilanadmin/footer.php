@@ -1,4 +1,4 @@
-<!-- Footer -->
+      <!-- Footer -->
 <footer class="content-footer footer bg-footer-theme">
   <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
     <div class="mb-2 mb-md-0">
@@ -25,49 +25,6 @@
 <!-- / Layout wrapper -->
 <!-- Up Button -->
 <a id="button"></a>
-<style>
-  #button {
-    text-decoration: none;
-    display: inline-block;
-    background-color: #FF9800;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 10px;
-    right: 30px;
-    transition: background-color .3s,
-      opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-  }
-
-  #button::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
-    color: #fff;
-  }
-
-  #button:hover {
-    cursor: pointer;
-    background-color: #333;
-  }
-
-  #button:active {
-    background-color: #555;
-  }
-
-  #button.show {
-    opacity: 1;
-    visibility: visible;
-  }
-</style>
 
 <script>
   var btn = $('#button');

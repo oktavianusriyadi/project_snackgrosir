@@ -18,10 +18,30 @@ class Transaksi_m extends CI_Model
   {
     $this->db->select('*');
     $this->db->from('tb_transaksi');
-    $this->db->where('status_bayar=0');
     $this->db->where('id_pelanggan', $this->session->userdata('id_pelanggan')); //untuk filter id_pelanggan saat di pesanan saya
     $this->db->order_by('id_transaksi', 'desc');
     return $this->db->get()->result();
+  }
+
+  public function detail_pesanan($id_transaksi)
+  {
+    $this->db->select('*');
+    $this->db->from('tb_transaksi');
+    $this->db->where('id_transaksi', $id_transaksi);
+    return $this->db->get()->row();
+  }
+
+  public function rekening()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_rekening');
+    return $this->db->get()->result();
+  }
+
+  public function upload_bukti($data)
+  {
+    $this->db->where('id_transaksi', $data['id_transaksi']);
+    $this->db->update('tb_transaksi', $data);
   }
 }
 

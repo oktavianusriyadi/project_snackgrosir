@@ -55,21 +55,6 @@ class Admin extends CI_Controller
       redirect('admin/Admin/setting');
     }
   }
-
-  // Add a new item
-  public function add()
-  {
-  }
-
-  //Update one item
-  public function update($id = NULL)
-  {
-  }
-
-  //Delete one item
-  public function delete($id = NULL)
-  {
-  }
 }
 
 /* End of file Admin.php */

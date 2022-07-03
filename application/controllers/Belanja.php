@@ -83,7 +83,7 @@ class Belanja extends CI_Controller
       $this->load->view('tampilanuser/footer');
     } else {
       //Simpan ke tb_transaksi
-      $data = array(    
+      $data = array(
         'id_pelanggan' => $this->session->userdata('id_pelanggan'),
         'no_order' => $this->input->post('no_order'),
         'tgl_order' => date('Y-m-d'),

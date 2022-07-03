@@ -100,18 +100,3 @@
               bacaGambar(this);
             });
           </script>
-
-          <style>
-            .imgpreview {
-              box-sizing: border-box;
-              border-radius: 10px;
-              width: 160px;
-            }
-
-            @media (max-width:600px) {
-              .imgpreview {
-                margin-top: 1em;
-
-              }
-            }
-          </style>

@@ -1,7 +1,7 @@
 <div class="container-fluid mt-4">
   <div class="container-fluid">
     <div class="card">
-      <h5 class="card-header">Pesanan Saya</h5>
+      <h5 class="card-header bg-secondary text-white">Pesanan Saya</h5>
       <div class="card-body">
         <?php
         if ($this->session->flashdata('pesan')) {
@@ -63,11 +63,17 @@
                         <td>
                           <b>
                             Rp <?php echo number_format($value->total_bayar, 0) ?> <br>
-                            <span class="badge bg-warning text-dark">Belum Bayar</span>
+                            <?php if ($value->status_bayar == 1) { ?>
+                              <span class="badge bg-warning text-uppercase">Menunggu Konfirmasi</span>
+                            <?php } ?>
                           </b>
                         </td>
                         <td>
-                          <a href="#" class="btn btn-sm btn-danger">Bayar</a>
+                          <?php if ($value->status_bayar == 0) { ?>
+                            <a href="<?php echo base_url('Pesanan_saya/bayar/' . $value->id_transaksi) ?>" class="btn btn-sm btn-danger">Bayar</a>
+                          <?php } else { ?>
+                            <span class="badge bg-info text-uppercase">Sudah Bayar</span>
+                          <?php } ?>
                         </td>
                       </tr>
                     <?php } ?>
