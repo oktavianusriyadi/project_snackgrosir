@@ -18,11 +18,37 @@ class Pesanan extends CI_Controller
   {
     $data = array(
       'pesanan_masuk' => $this->Pesanan_m->pesanan(),
+      'pesanan_dikemas' => $this->Pesanan_m->pesanan_dikemas(),
+      'pesanan_dikirim' => $this->Pesanan_m->pesanan_dikirim(),
+      'pesanan_selesai' => $this->Pesanan_m->pesanan_selesai(),
     );
     $this->load->view('tampilanadmin/sidebar');
     $this->load->view('tampilanadmin/header');
     $this->load->view('admin/Pesanan_v', $data, FALSE);
     $this->load->view('tampilanadmin/footer');
+  }
+
+  public function dikemas($id_transaksi)
+  {
+    $data = array(
+      'id_transaksi' => $id_transaksi,
+      'status_order' => '1'
+    );
+    $this->Pesanan_m->update_order($data);
+    $this->session->set_flashdata('pesan', 'Pesanan Berhasil Diproses Untuk Dikemas');
+    redirect('admin/Pesanan');
+  }
+
+  public function kirim($id_transaksi)
+  {
+    $data = array(
+      'id_transaksi' => $id_transaksi,
+      'no_resi' => $this->input->post('no_resi'),
+      'status_order' => '2'
+    );
+    $this->Pesanan_m->update_order($data);
+    $this->session->set_flashdata('pesan', 'Pesanan Berhasil Dikirim');
+    redirect('admin/Pesanan');
   }
 }
 

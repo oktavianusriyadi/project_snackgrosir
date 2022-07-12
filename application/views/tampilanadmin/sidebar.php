@@ -84,6 +84,14 @@ $this->user_login->proteksi_hal();
             </a>
           </li>
 
+          <!-- Pelanggan -->
+          <!-- <li class="menu-item">
+            <a href="<?php echo base_url('admin/Admin/pelanggan') ?>" class="menu-link">
+              <i class='menu-icon tf-icons bx bxs-user'></i>
+              <div>Data Pelanggan</div>
+            </a>
+          </li> -->
+
           <!-- Kategori -->
           <li class="menu-item">
             <a href="<?php echo base_url('admin/Kategori') ?>" class="menu-link">
@@ -134,4 +142,3 @@ $this->user_login->proteksi_hal();
         </ul>
       </aside>
       <!-- / Menu -->
-      

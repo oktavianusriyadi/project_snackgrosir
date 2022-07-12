@@ -10,12 +10,16 @@ class Pesanan_saya extends CI_Controller
     parent::__construct();
     //Do your magic here
     $this->load->model('Transaksi_m');
+    $this->load->model('admin/Pesanan_m');
   }
 
   public function index()
   {
     $data = array(
       'belum_bayar' => $this->Transaksi_m->belum_bayar(),
+      'dikemas' => $this->Transaksi_m->dikemas(),
+      'dikirim' => $this->Transaksi_m->dikirim(),
+      'selesai' => $this->Transaksi_m->selesai(),
     );
     $this->load->view('tampilanuser/header');
     $this->load->view('user/Pesanan_saya_v', $data, FALSE);
@@ -60,6 +64,17 @@ class Pesanan_saya extends CI_Controller
     $this->load->view('tampilanuser/header');
     $this->load->view('user/Bayar_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
+  }
+
+  public function diterima($id_transaksi)
+  {
+    $data = array(
+      'id_transaksi' => $id_transaksi,
+      'status_order' => '3'
+    );
+    $this->Pesanan_m->update_order($data);
+    $this->session->set_flashdata('pesan', 'Pesanan Sudah Diterima');
+    redirect('Pesanan_saya');
   }
 }
 

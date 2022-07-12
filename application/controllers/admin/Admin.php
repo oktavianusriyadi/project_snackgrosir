@@ -12,6 +12,7 @@ class Admin extends CI_Controller
     parent::__construct();
     //Load Dependencies
     $this->load->model('admin/Admin_m');
+    $this->load->model('admin/Pesanan_m');
   }
 
   // List all your items
@@ -20,6 +21,9 @@ class Admin extends CI_Controller
     $data = array(
       'total_produk' => $this->Admin_m->total_produk(),
       'total_kategori' => $this->Admin_m->total_kategori(),
+      'total_pesanan' => $this->Admin_m->total_pesanan(),
+      'total_pelanggan' => $this->Admin_m->total_pelanggan(),
+      'total_user' => $this->Admin_m->total_user(),
     );
     $this->load->view('tampilanadmin/sidebar');
     $this->load->view('tampilanadmin/header');
@@ -27,6 +31,20 @@ class Admin extends CI_Controller
     $this->load->view('tampilanadmin/footer');
   }
 
+  // Pelanggan
+  // public function pelanggan()
+  // {
+  //   $data = array(
+  //     'pelanggan' => $this->Admin_m->tampil_pelanggan(),
+  //   );
+  //   $this->load->view('tampilanadmin/sidebar');
+  //   $this->load->view('tampilanadmin/header');
+  //   $this->load->view('admin/Pelanggan_v', $data, FALSE);
+  //   $this->load->view('tampilanadmin/footer');
+  // }
+  // End Pelanggan
+
+  // Setting
   public function setting()
   {
     $this->form_validation->set_rules('nama_toko', 'Nama Toko', 'required', array('required' => '%s Harus Diisi!'));
@@ -55,6 +73,7 @@ class Admin extends CI_Controller
       redirect('admin/Admin/setting');
     }
   }
+  // End Setting
 }
 
 /* End of file Admin.php */
