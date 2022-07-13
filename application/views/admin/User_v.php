@@ -1,6 +1,7 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="card-header bg-primary text-white">Admin/User</h4>
               <div class="card">
                 <div class="card-header">
                   <button type="button" class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#add">

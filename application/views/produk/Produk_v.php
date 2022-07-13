@@ -1,6 +1,7 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="card-header bg-primary text-white">Produk</h4>
               <div class="card">
                 <div class="card-header">
                   <a href="<?php echo base_url('Produk/add') ?>" type="button" class="btn btn-primary mb-4">

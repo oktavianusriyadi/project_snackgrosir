@@ -31,6 +31,7 @@ $this->user_login->proteksi_hal();
   <link rel="stylesheet" href="<?php echo base_url('assets/vendor/css/theme-default.css') ?>" class="template-customizer-theme-css">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/demo.css') ?>" />
   <link rel="stylesheet" href="<?php echo base_url('assets/css/admin.css') ?>" />
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css') ?>" />
 
   <!-- Vendors CSS -->
   <link rel="stylesheet" href="<?php echo base_url('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') ?>">

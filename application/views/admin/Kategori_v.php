@@ -2,6 +2,8 @@
           <div class="content-wrapper">
             <div class="container-xxl flex-grow-1 container-p-y">
 
+              <h4 class="card-header bg-primary text-white">Kategori</h4>
+
               <div class="card">
                 <div class="card-header">
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add">
