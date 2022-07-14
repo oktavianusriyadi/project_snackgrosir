@@ -53,10 +53,108 @@
 
   /* ================================================================= */
 
-  /* No Print */
+/* ****** CSS Admin ****** */  
+
+  /* Sidebar */
+.menu-item:hover {
+  transform: scale(1.1);
+  background-color: lightskyblue;
+}
+
+.menu-item {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: medium;
+}
+/* //Sidebar */
+
+/* Dashboard */
+.card-title {
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.bx,
+.total {
+  color: black;
+}
+
+.cardD:hover {
+  background-color: lightcyan;
+}
+/* //Dashboard */
+
+/* Tambah & Update Produk */
+.imgpreview {
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 160px;
+}
+
+@media (max-width:600px) {
+  .imgpreview {
+    margin-top: 1em;
+
+  }
+}
+/* //Tambah & Update Produk */
+
+
+  /* Laporan */
   @media print {
     .no-print {
       display: none;
     }
   }
-  /* End No Print */
+
+  .card-laporan{
+    height: 180px;
+    box-sizing: border-box;
+    color: black;
+  }
+  /* //Laporan */
+
+/* Button Up */
+#button {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #FF9800;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  transition: background-color .3s,
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#button:active {
+  background-color: #555;
+}
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+/* //Button Up */
+
+/* ****** //CSS User ***** */

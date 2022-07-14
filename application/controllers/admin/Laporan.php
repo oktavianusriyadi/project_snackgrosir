@@ -39,6 +39,36 @@ class Laporan extends CI_Controller
     $this->load->view('admin/LapHarian_v', $data, FALSE);
     $this->load->view('tampilanadmin/footer');
   }
+
+  public function lap_bulanan()
+  {
+    $bulan = $this->input->post('bulan');
+    $tahun = $this->input->post('tahun');
+
+    $data = array(
+      'bulan' => $bulan,
+      'tahun' => $tahun,
+      'laporan' => $this->Laporan_m->lap_bulanan($bulan, $tahun),
+    );
+    $this->load->view('tampilanadmin/sidebar');
+    $this->load->view('tampilanadmin/header');
+    $this->load->view('admin/LapBulanan_v', $data, FALSE);
+    $this->load->view('tampilanadmin/footer');
+  }
+
+  public function lap_tahunan()
+  {
+    $tahun = $this->input->post('tahun');
+
+    $data = array(
+      'tahun' => $tahun,
+      'laporan' => $this->Laporan_m->lap_tahunan($tahun),
+    );
+    $this->load->view('tampilanadmin/sidebar');
+    $this->load->view('tampilanadmin/header');
+    $this->load->view('admin/LapTahunan_v', $data, FALSE);
+    $this->load->view('tampilanadmin/footer');
+  }
 }
 
 /* End of file Laporan.php */

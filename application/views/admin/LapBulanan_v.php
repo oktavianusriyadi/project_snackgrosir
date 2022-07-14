@@ -13,8 +13,8 @@
             <div class="row">
               <div class="col-12">
                 <h4 class="text-black">
-                  Laporan Penjualan Harian
-                  <small class="float-end">Tanggal : <?php echo $tanggal ?>/<?php echo $bulan ?>/<?php echo $tahun ?></small>
+                  Laporan Penjualan Bulanan
+                  <small class="float-end">Bulan : <?php echo $bulan ?>/ Tahun : <?php echo $tahun ?></small>
                 </h4>
               </div>
             </div>
@@ -25,29 +25,22 @@
                     <tr>
                       <th>No</th>
                       <th>Nomor Order</th>
-                      <th>Produk</th>
-                      <th>Harga</th>
-                      <th>QTY</th>
-                      <th>Total Harga</th>
+                      <th>Tanggal</th>
+                      <th>Grand Total</th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php
                     $no = 1;
                     $total = 0;
-                    $jml_produk = 0;
                     foreach ($laporan as $key => $value) {
-                      $tot_harga = $value->qty * $value->harga;
-                      $total = $total + $tot_harga;
-                      $jml_produk = $jml_produk + $value->qty;
+                      $total = $total + $value->grand_total;
                     ?>
                       <tr>
                         <td><?php echo $no++; ?></td>
                         <td><?php echo $value->no_order ?></td>
-                        <td><?php echo $value->nama_produk ?></td>
-                        <td>Rp <?php echo number_format($value->harga, 0) ?></td>
-                        <td><?php echo $value->qty ?></td>
-                        <td>Rp <?php echo number_format($tot_harga, 0) ?></td>
+                        <td><?php echo $value->tgl_order ?></td>
+                        <td>Rp <?php echo number_format($value->grand_total, 0) ?></td>
                       </tr>
                     <?php } ?>
                   </tbody>
@@ -55,11 +48,6 @@
                 <div class="row mt-3 float-end">
                   <div class="col-md-12">
                     <table class="table">
-                      <tr>
-                        <td><b>Jumlah Produk</b></td>
-                        <td><b>:</b></td>
-                        <td><b><?php echo $jml_produk ?> Produk</b></td>
-                      </tr>
                       <tr>
                         <td><b>Total</b></td>
                         <td><b>:</b></td>
