@@ -64,17 +64,15 @@
                                   </td>
                                   <td>
                                     <b>Rp <?php echo number_format($value->total_bayar, 0) ?> <br>
-                                      <?php if ($value->status_bayar == 1) { ?>
-                                        <span class="badge bg-warning text-black">Menunggu Konfirmasi</span>
-                                      <?php } else { ?>
+                                      <?php if ($value->status_bayar == 0) { ?>
                                         <span class="badge bg-label-danger">Belum Bayar</span>
                                       <?php } ?>
                                     </b>
                                   </td>
                                   <td>
                                     <?php if ($value->status_bayar == 1) { ?>
-                                      <Button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#cek<?php echo $value->id_transaksi ?>">Bukti Bayar</Button>
-                                      <a href="<?php echo base_url('admin/Pesanan/dikemas/' . $value->id_transaksi) ?>" class="btn btn-sm btn-danger">Dikemas</a>
+                                      <Button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#cek<?php echo $value->id_transaksi ?>">Bukti</Button>
+                                      <a href="<?php echo base_url('admin/Pesanan/dikemas/' . $value->id_transaksi) ?>" class="btn btn-sm btn-danger">Kemas</a>
                                     <?php } ?>
                                   </td>
                                 </tr>
