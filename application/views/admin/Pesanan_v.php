@@ -42,143 +42,202 @@
                           </li>
                         </ul>
                         <div class="tab-content">
+                          <!-- Pesanan Masuk -->
                           <div class="tab-pane fade show active" id="navs-top-blmbayar" role="tabpanel">
-                            <table class="table">
-                              <tr>
-                                <th>No. Order</th>
-                                <th>Tanggal</th>
-                                <th>Expedisi</th>
-                                <th>Total Bayar</th>
-                                <th>Action</th>
-                              </tr>
-                              <?php foreach ($pesanan_masuk as $key => $value) { ?>
+                            <?php foreach ($pesanan_masuk as $key => $value) {
+                            } ?>
+                            <?php if (empty($pesanan_masuk)) { ?>
+                              <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                  <div class="card-body">
+                                    <h4 class="text-center">Tidak ada Transaksi!</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            <?php } else { ?>
+                              <table class="table">
                                 <tr>
-                                  <td><?php echo $value->no_order ?></td>
-                                  <td><?php echo $value->tgl_order ?></td>
-                                  <td>
-                                    <b class="text-uppercase">
-                                      <?php echo $value->expedisi ?>
-                                    </b>
-                                    (<?php echo $value->paket ?>) <br>
-                                    <b>Rp <?php echo number_format($value->ongkir, 0) ?></b>
-                                  </td>
-                                  <td>
-                                    <b>Rp <?php echo number_format($value->total_bayar, 0) ?> <br>
-                                      <?php if ($value->status_bayar == 0) { ?>
-                                        <span class="badge bg-label-danger">Belum Bayar</span>
+                                  <th>No. Order</th>
+                                  <th>Tanggal</th>
+                                  <th>Expedisi</th>
+                                  <th>Total Bayar</th>
+                                  <th>Action</th>
+                                </tr>
+                                <?php foreach ($pesanan_masuk as $key => $value) { ?>
+                                  <tr>
+                                    <td><?php echo $value->no_order ?></td>
+                                    <td><?php echo $value->tgl_order ?></td>
+                                    <td>
+                                      <b class="text-uppercase">
+                                        <?php echo $value->expedisi ?>
+                                      </b>
+                                      (<?php echo $value->paket ?>) <br>
+                                      <b>Rp <?php echo number_format($value->ongkir, 0) ?></b>
+                                    </td>
+                                    <td>
+                                      <b>Rp <?php echo number_format($value->total_bayar, 0) ?> <br>
+                                        <?php if ($value->status_bayar == 0) { ?>
+                                          <span class="badge bg-label-danger">Belum Bayar</span>
+                                        <?php } ?>
+                                      </b>
+                                    </td>
+                                    <td>
+                                      <?php if ($value->status_bayar == 1) { ?>
+                                        <Button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#cek<?php echo $value->id_transaksi ?>">Bukti</Button>
+                                        <a href="<?php echo base_url('admin/Pesanan/dikemas/' . $value->id_transaksi) ?>" class="btn btn-sm btn-danger">Kemas</a>
                                       <?php } ?>
-                                    </b>
-                                  </td>
-                                  <td>
-                                    <?php if ($value->status_bayar == 1) { ?>
-                                      <Button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#cek<?php echo $value->id_transaksi ?>">Bukti</Button>
-                                      <a href="<?php echo base_url('admin/Pesanan/dikemas/' . $value->id_transaksi) ?>" class="btn btn-sm btn-danger">Kemas</a>
-                                    <?php } ?>
-                                  </td>
-                                </tr>
-                              <?php } ?>
-                            </table>
+                                    </td>
+                                  </tr>
+                                <?php } ?>
+                              </table>
+                            <?php } ?>
                           </div>
+                          <!-- //Pesanan Masuk -->
+
+                          <!-- Dikemas -->
                           <div class="tab-pane fade" id="navs-top-dikemas" role="tabpanel">
-                            <table class="table">
-                              <tr>
-                                <th>No. Order</th>
-                                <th>Tanggal</th>
-                                <th>Expedisi</th>
-                                <th>Total Bayar</th>
-                                <th>Action</th>
-                              </tr>
-                              <?php foreach ($pesanan_dikemas as $key => $value) { ?>
+                            <?php foreach ($pesanan_dikemas as $key => $value) {
+                            } ?>
+                            <?php if (empty($pesanan_dikemas)) { ?>
+                              <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                  <div class="card-body">
+                                    <h4 class="text-center">Tidak ada Transaksi!</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            <?php } else { ?>
+                              <table class="table">
                                 <tr>
-                                  <td><?php echo $value->no_order ?></td>
-                                  <td><?php echo $value->tgl_order ?></td>
-                                  <td>
-                                    <b class="text-uppercase">
-                                      <?php echo $value->expedisi ?>
-                                    </b>
-                                    (<?php echo $value->paket ?>) <br>
-                                    <b>Rp <?php echo number_format($value->ongkir, 0) ?></b>
-                                  </td>
-                                  <td>
-                                    <b>
-                                      Rp <?php echo number_format($value->total_bayar, 0) ?>
-                                    </b>
-                                  </td>
-                                  <td>
-                                    <?php if ($value->status_bayar == 1) { ?>
-                                      <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#kirim<?php echo $value->id_transaksi ?>">Kirim</button>
-                                    <?php } ?>
-                                  </td>
+                                  <th>No. Order</th>
+                                  <th>Tanggal</th>
+                                  <th>Expedisi</th>
+                                  <th>Total Bayar</th>
+                                  <th>Action</th>
                                 </tr>
-                              <?php } ?>
-                            </table>
+                                <?php foreach ($pesanan_dikemas as $key => $value) { ?>
+                                  <tr>
+                                    <td><?php echo $value->no_order ?></td>
+                                    <td><?php echo $value->tgl_order ?></td>
+                                    <td>
+                                      <b class="text-uppercase">
+                                        <?php echo $value->expedisi ?>
+                                      </b>
+                                      (<?php echo $value->paket ?>) <br>
+                                      <b>Rp <?php echo number_format($value->ongkir, 0) ?></b>
+                                    </td>
+                                    <td>
+                                      <b>
+                                        Rp <?php echo number_format($value->total_bayar, 0) ?>
+                                      </b>
+                                    </td>
+                                    <td>
+                                      <?php if ($value->status_bayar == 1) { ?>
+                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#kirim<?php echo $value->id_transaksi ?>">Kirim</button>
+                                      <?php } ?>
+                                    </td>
+                                  </tr>
+                                <?php } ?>
+                              </table>
+                            <?php } ?>
                           </div>
+                          <!-- //Dikemas -->
+
+                          <!-- Kirim -->
                           <div class="tab-pane fade" id="navs-top-kirim" role="tabpanel">
-                            <table class="table">
-                              <tr>
-                                <th>No. Order</th>
-                                <th>Tanggal</th>
-                                <th>Expedisi</th>
-                                <th>Total Bayar</th>
-                                <th>Nomor Resi</th>
-                              </tr>
-                              <?php foreach ($pesanan_dikirim as $key => $value) { ?>
+                            <?php foreach ($pesanan_dikirim as $key => $value) {
+                            } ?>
+                            <?php if (empty($pesanan_dikirim)) { ?>
+                              <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                  <div class="card-body">
+                                    <h4 class="text-center">Tidak ada Transaksi!</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            <?php } else { ?>
+                              <table class="table">
                                 <tr>
-                                  <td><?php echo $value->no_order ?></td>
-                                  <td><?php echo $value->tgl_order ?></td>
-                                  <td>
-                                    <b class="text-uppercase">
-                                      <?php echo $value->expedisi ?>
-                                    </b>
-                                    (<?php echo $value->paket ?>) <br>
-                                    <b>Rp <?php echo number_format($value->ongkir, 0) ?></b>
-                                  </td>
-                                  <td>
-                                    <b>Rp <?php echo number_format($value->total_bayar, 0) ?> <br>
-                                    </b>
-                                  </td>
-                                  <td>
-                                    <b><?php echo $value->no_resi ?></b>
-                                  </td>
+                                  <th>No. Order</th>
+                                  <th>Tanggal</th>
+                                  <th>Expedisi</th>
+                                  <th>Total Bayar</th>
+                                  <th>Nomor Resi</th>
                                 </tr>
-                              <?php } ?>
-                            </table>
+                                <?php foreach ($pesanan_dikirim as $key => $value) { ?>
+                                  <tr>
+                                    <td><?php echo $value->no_order ?></td>
+                                    <td><?php echo $value->tgl_order ?></td>
+                                    <td>
+                                      <b class="text-uppercase">
+                                        <?php echo $value->expedisi ?>
+                                      </b>
+                                      (<?php echo $value->paket ?>) <br>
+                                      <b>Rp <?php echo number_format($value->ongkir, 0) ?></b>
+                                    </td>
+                                    <td>
+                                      <b>Rp <?php echo number_format($value->total_bayar, 0) ?> <br>
+                                      </b>
+                                    </td>
+                                    <td>
+                                      <b><?php echo $value->no_resi ?></b>
+                                    </td>
+                                  </tr>
+                                <?php } ?>
+                              </table>
+                            <?php } ?>
                           </div>
+                          <!-- //Dikirim -->
+
+                          <!-- Selesai -->
                           <div class="tab-pane fade" id="navs-top-selesai" role="tabpanel">
-                            <table class="table">
-                              <tr>
-                                <th>No. Order</th>
-                                <th>Tanggal</th>
-                                <th>Expedisi</th>
-                                <th>Total Bayar</th>
-                                <th>Nomor Resi</th>
-                                <th>Action</th>
-                              </tr>
-                              <?php foreach ($pesanan_selesai as $key => $value) { ?>
+                            <?php foreach ($pesanan_selesai as $key => $value) {
+                            } ?>
+                            <?php if (empty($pesanan_selesai)) { ?>
+                              <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                  <div class="card-body">
+                                    <h4 class="text-center">Tidak ada Transaksi!</h4>
+                                  </div>
+                                </div>
+                              </div>
+                            <?php } else { ?>
+                              <table class="table">
                                 <tr>
-                                  <td><?php echo $value->no_order ?></td>
-                                  <td><?php echo $value->tgl_order ?></td>
-                                  <td>
-                                    <b class="text-uppercase">
-                                      <?php echo $value->expedisi ?>
-                                    </b>
-                                    (<?php echo $value->paket ?>) <br>
-                                    <b>Rp <?php echo number_format($value->ongkir, 0) ?></b>
-                                  </td>
-                                  <td>
-                                    <b>Rp <?php echo number_format($value->total_bayar, 0) ?> <br>
-                                    </b>
-                                  </td>
-                                  <td>
-                                    <b><?php echo $value->no_resi ?></b>
-                                  </td>
-                                  <td>
-                                    <span class="badge bg-success">Sudah Diterima</span>
-                                  </td>
+                                  <th>No. Order</th>
+                                  <th>Tanggal</th>
+                                  <th>Expedisi</th>
+                                  <th>Total Bayar</th>
+                                  <th>Nomor Resi</th>
+                                  <th>Action</th>
                                 </tr>
-                              <?php } ?>
-                            </table>
+                                <?php foreach ($pesanan_selesai as $key => $value) { ?>
+                                  <tr>
+                                    <td><?php echo $value->no_order ?></td>
+                                    <td><?php echo $value->tgl_order ?></td>
+                                    <td>
+                                      <b class="text-uppercase">
+                                        <?php echo $value->expedisi ?>
+                                      </b>
+                                      (<?php echo $value->paket ?>) <br>
+                                      <b>Rp <?php echo number_format($value->ongkir, 0) ?></b>
+                                    </td>
+                                    <td>
+                                      <b>Rp <?php echo number_format($value->total_bayar, 0) ?> <br>
+                                      </b>
+                                    </td>
+                                    <td>
+                                      <b><?php echo $value->no_resi ?></b><br>
+                                    </td>
+                                    <td>
+                                      <span class="badge bg-success">Sudah Diterima</span>
+                                    </td>
+                                  </tr>
+                                <?php } ?>
+                              </table>
+                            <?php } ?>
                           </div>
+                          <!-- //Selesai -->
                         </div>
                       </div>
                     </div>
@@ -259,7 +318,7 @@
                         <tr>
                           <td><?php echo $value->nama_penerima ?></td>
                           <td>
-                            <?php echo $value->expedisi ?> (<?php echo $value->paket ?>)<br>
+                            <b class="text-uppercase"><?php echo $value->expedisi ?></b> (<?php echo $value->paket ?>)<br>
                             Rp <?php echo number_format($value->ongkir, 0) ?>
                           </td>
                         </tr>

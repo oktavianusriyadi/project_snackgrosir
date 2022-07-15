@@ -23,17 +23,7 @@ class Beranda extends CI_Controller
     $this->load->view('tampilanuser/footer');
   }
 
-  public function detail_produk($id_produk)
-  {
-    $data = array(
-      'detail' => $this->Beranda_m->detail_produk($id_produk),
-      'gambarP' => $this->Beranda_m->gambar_produk($id_produk),
-    );
-    $this->load->view('tampilanuser/header');
-    $this->load->view('user/Detail_v', $data, FALSE);
-    $this->load->view('tampilanuser/footer');
-  }
-
+  // Menampilkan Semua Produk
   public function AllProduk()
   {
     $data = array(
@@ -43,7 +33,9 @@ class Beranda extends CI_Controller
     $this->load->view('user/Beranda_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
   }
+  // End
 
+  //Menampilkan Produk Berdasarkan Kategori
   public function kategori($id_kategori)
   {
     $kategori = $this->Beranda_m->kategori($id_kategori);
@@ -54,21 +46,20 @@ class Beranda extends CI_Controller
     $this->load->view('user/Kategori_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
   }
+  // End
 
-  // Add a new item
-  public function add()
+  // Menampilkan Detail Produk
+  public function detail_produk($id_produk)
   {
+    $data = array(
+      'detail' => $this->Beranda_m->detail_produk($id_produk),
+      'gambarP' => $this->Beranda_m->gambar_produk($id_produk),
+    );
+    $this->load->view('tampilanuser/header');
+    $this->load->view('user/Detail_v', $data, FALSE);
+    $this->load->view('tampilanuser/footer');
   }
-
-  //Update one item
-  public function update($id = NULL)
-  {
-  }
-
-  //Delete one item
-  public function delete($id = NULL)
-  {
-  }
+  // End
 }
 
 /* End of file Beranda.php */

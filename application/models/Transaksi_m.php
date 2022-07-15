@@ -14,7 +14,7 @@ class Transaksi_m extends CI_Model
     $this->db->insert('tb_rinci_transaksi', $data_rinci);
   }
 
-  public function belum_bayar()
+  public function pesanan()
   {
     $this->db->select('*');
     $this->db->from('tb_transaksi');
@@ -60,6 +60,14 @@ class Transaksi_m extends CI_Model
     $this->db->from('tb_transaksi');
     $this->db->where('id_transaksi', $id_transaksi);
     return $this->db->get()->row();
+  }
+
+  public function detail()
+  {
+    $this->db->select('*');
+    $this->db->from('tb_transaksi');
+    $this->db->order_by('id_transaksi', 'desc');
+    return $this->db->get()->result();
   }
 
   public function rekening()

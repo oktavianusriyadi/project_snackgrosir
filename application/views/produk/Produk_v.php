@@ -44,9 +44,9 @@
                             <img src="<?php echo base_url('assets/imgcover/' . $value->gambar) ?>" width="100px">
                           </td>
                           <td>
-                            <a href="#" class="btn btn-success btn-sm">
+                            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#detail<?php echo $value->id_produk ?>">
                               <i class="fas fa-search-plus"></i>
-                            </a>
+                            </button>
                             <a href="<?php echo base_url('produk/update/' . $value->id_produk) ?>" class="btn btn-primary btn-sm">
                               <i class="bx bx-edit"></i>
                             </a>
@@ -84,3 +84,57 @@
               </div>
             <?php } ?>
             <!-- //Modal Delete -->
+
+            <!-- Modal Detail -->
+            <?php foreach ($produk as $key => $value) { ?>
+              <div class="modal fade" id="detail<?php echo $value->id_produk ?>">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title"><?php echo $value->nama_produk ?></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="<?php echo base_url('assets/imgcover/' . $value->gambar) ?>" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <table class="table">
+                              <tr>
+                                <td>Kategori</td>
+                                <td>:</td>
+                                <td><?php echo $value->kategori ?></td>
+                              </tr>
+                              <tr>
+                                <td>Berat</td>
+                                <td>:</td>
+                                <td><?php echo $value->berat ?> Gram</td>
+                              </tr>
+                              <tr>
+                                <td>Harga</td>
+                                <td>:</td>
+                                <td>Rp <?php echo number_format($value->harga, 0) ?></td>
+                              </tr>
+                            </table>
+                            <p>
+                              <b>Deskripsi :</b><br>
+                              <?php echo $value->deskripsi ?>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <a href="<?php echo base_url('produk/update/' . $value->id_produk) ?>" class="btn btn-primary">
+                        Update
+                      </a>
+                      <a href="<?php echo base_url('Produk/delete/' . $value->id_produk) ?>" class="btn btn-danger">Hapus</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <?php } ?>
+            <!-- //Modal Detail -->
