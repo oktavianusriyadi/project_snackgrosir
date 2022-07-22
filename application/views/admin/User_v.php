@@ -1,7 +1,7 @@
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="card-header bg-primary text-white">Admin/User</h4>
+              <h4 class="card-header bg-primary text-white">Admin</h4>
               <div class="card">
                 <div class="card-header">
                   <button type="button" class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#add">
@@ -23,10 +23,9 @@
                     <thead>
                       <tr>
                         <th class="text-center">No</th>
-                        <th>Nama User</th>
-                        <th>Username</th>
-                        <th>Password</th>
-                        <th>Level User</th>
+                        <th class="text-center">Nama User</th>
+                        <th class="text-center">Username</th>
+                        <th class="text-center">Password</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -35,16 +34,9 @@
                       foreach ($user as $key => $value) { ?>
                         <tr>
                           <td class="text-center"><?php echo $no++; ?></td>
-                          <td><?php echo $value->nama ?></td>
-                          <td><?php echo $value->username ?></td>
-                          <td><?php echo $value->password ?></td>
-                          <td><?php
-                              if ($value->level_user == 1) {
-                                echo 'Admin';
-                              } else {
-                                echo 'User';
-                              }
-                              ?></td>
+                          <td class="text-center"><?php echo $value->nama ?></td>
+                          <td class="text-center"><?php echo $value->username ?></td>
+                          <td class="text-center"><?php echo $value->password ?></td>
                           <td>
                             <button class="btn btn-secondary btn-sm">
                               <i class="fas fa-search-plus"></i>
@@ -99,13 +91,6 @@
                       </div>
                     </div>
 
-                    <div class="mb-3">
-                      <label class="form-label"><strong>Level User</strong></label>
-                      <select name="level_user" class="form-select">
-                        <option value="1" selected>Admin</option>
-                        <option value="2">User</option>
-                      </select>
-                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -153,19 +138,6 @@
                         </div>
                       </div>
 
-                      <div class="mb-3">
-                        <label class="form-label"><strong>Level User</strong></label>
-                        <select name="level_user" class="form-select">
-                          <option value="1" <?php if ($value->level_user == 1) {
-                                              echo 'selected';
-                                            } {
-                                            } ?>>Admin</option>
-                          <option value="2" <?php if ($value->level_user == 2) {
-                                              echo 'selected';
-                                            } {
-                                            } ?>>User</option>
-                        </select>
-                      </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

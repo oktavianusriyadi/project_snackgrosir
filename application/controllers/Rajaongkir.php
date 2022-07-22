@@ -15,7 +15,7 @@ class Rajaongkir extends CI_Controller
 
   private $api_key = 'c1d52a23c32c9c511d40cee333691556';
 
-  //
+  //Provinsi
   public function provinsi()
   {
     $curl = curl_init();
@@ -57,7 +57,7 @@ class Rajaongkir extends CI_Controller
     }
   }
 
-  //
+  //Kota
   public function kota()
   {
     $id_provinsi_terpilih = $this->input->post('id_provinsi');
