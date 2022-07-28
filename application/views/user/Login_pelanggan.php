@@ -44,7 +44,7 @@
           <p class="text-center mt-4">
             <span>Belum Punya Akun?</span>
             <a href="<?php echo base_url('Pelanggan/register') ?>">
-              <span>Login</span>
+              <span>Daftar</span>
             </a>
           </p>
         </div>

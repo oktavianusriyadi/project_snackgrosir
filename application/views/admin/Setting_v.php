@@ -91,7 +91,7 @@
 
                   $.ajax({
                     type: "POST",
-                    url: "<?php echo base_url('Rajaongkir/kota') ?>",
+                    url: "<?php echo base_url('Rajaongkir/kota_toko') ?>",
                     data: 'id_provinsi=' + id_provinsi_terpilih,
                     success: function(hasil_kota) {
                       // console.log(hasil_kota);

@@ -12,6 +12,7 @@ class Pelanggan extends CI_Controller
     //Load Dependencies
     $this->load->model('Pelanggan_m');
     $this->load->model('admin/Auth_m');
+    $this->load->model('Transaksi_m');
   }
 
   // List all your items
@@ -50,7 +51,7 @@ class Pelanggan extends CI_Controller
       );
       $this->Pelanggan_m->register($data);
       $this->session->set_flashdata('pesan', 'Selamat, Register Berhasil');
-      redirect('Pelanggan/register');
+      redirect('Pelanggan/login');
     }
   }
 
@@ -84,8 +85,11 @@ class Pelanggan extends CI_Controller
     //proteksi halaman
     $this->pelanggan_login->proteksi_hal();
     //
+    $data = array(
+      // 'akun' => $this->Pelanggan_m->tampil_akun(),
+    );
     $this->load->view('tampilanuser/header');
-    $this->load->view('user/Akun_v');
+    $this->load->view('user/Akun_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
   }
 }

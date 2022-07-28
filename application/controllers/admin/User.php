@@ -32,7 +32,6 @@ class User extends CI_Controller
       'nama' => $this->input->post('nama'),
       'username' => $this->input->post('username'),
       'password' => $this->input->post('password'),
-      'level_user' => $this->input->post('level_user'),
     );
     $this->User_m->add($data);
     $this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan!');
