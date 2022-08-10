@@ -89,7 +89,7 @@ class Pelanggan extends CI_Controller
       'akun' => $this->Pelanggan_m->tampil_akun(),
     );
     $this->load->view('tampilanuser/header');
-    $this->load->view('user/Akun', $data, FALSE);
+    $this->load->view('user/Akun_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
   }
 }
