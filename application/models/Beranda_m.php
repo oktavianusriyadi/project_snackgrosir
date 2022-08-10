@@ -60,15 +60,6 @@ class Beranda_m extends CI_Model
     return $this->db->get()->result();
   }
   // End
-
-  // public function semuaProduk()
-  // {
-  //   $this->db->select('*');
-  //   $this->db->from('tb_produk');
-  //   $this->db->join('tb_kategori', 'tb_kategori.id_kategori = tb_produk.id_kategori', 'left');
-  //   $this->db->order_by('id_produk', 'desc');
-  //   return $this->db->get()->result();
-  // }
 }
 
 /* End of file Beranda_m.php */

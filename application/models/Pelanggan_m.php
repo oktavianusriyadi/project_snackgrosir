@@ -17,6 +17,12 @@ class Pelanggan_m extends CI_Model
     $this->db->order_by('id_pelanggan', 'desc');
     $this->db->get()->result();
   }
+
+  public function update($data)
+  {
+    $this->db->where('id_pelanggan', $data['id_pelanggan']);
+    $this->db->update('tb_pelanggan', $data);
+  }
 }
 
 /* End of file Pelanggan_m.php */
