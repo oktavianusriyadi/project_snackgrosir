@@ -36,7 +36,7 @@ class Belanja extends CI_Controller
     );
 
     $this->cart->insert($data);
-    redirect($redirect_page, 'refresh');
+    redirect($redirect_page);
   }
 
   //Update one item

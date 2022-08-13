@@ -43,7 +43,7 @@ class Beranda extends CI_Controller
       'produk' => $this->Beranda_m->tampil_data_produk($id_kategori),
     );
     $this->load->view('tampilanuser/header');
-    $this->load->view('user/Kategori_v', $data, FALSE);
+    $this->load->view('user/Beranda_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
   }
   // End

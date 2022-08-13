@@ -51,9 +51,10 @@
           $jml_item = $jml_item + $value['qty'];
         }
         ?>
-        <a class="btn position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-          <i class="bx bxs-cart-alt bx-sm"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge bg-primary"><?php echo $jml_item ?></span>
+        <a class="btn btn-outline-dark m-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          <i class="fas fa-shopping-cart"></i>
+          Cart
+          <span class="badge bg-success text-white ms-1 rounded-pill"><?php echo $jml_item ?></span>
         </a>
         <div class="offcanvas offcanvas-end" data-bs-scroll="true" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
           <div class="offcanvas-header">
@@ -130,14 +131,13 @@
         <!-- End of Cart -->
         <!-- User -->
         <?php if ($this->session->userdata('email') == "") { ?>
-          <a class="btn" style="margin-left: 5px;" href="<?php echo base_url('Pelanggan/login') ?>">
-            Login
+          <a class="btn btn-outline-dark" style="margin-left: 5px;" href="<?php echo base_url('Pelanggan/login') ?>">
+            <b>Login</b>
           </a>
         <?php } else { ?>
-          <a class="btn" style="margin-left: 5px;" href="javascript:void(0);" data-bs-toggle="dropdown">
+          <a class="btn btn-outline-dark" style="margin-left: 5px;" href="javascript:void(0);" data-bs-toggle="dropdown">
             <!-- <h6>Hi, <?php echo $this->session->userdata('nama_pelanggan') ?></h6> -->
-            <i class="bx bxs-user-circle bx-sm"></i>
-            <span class="avatar-status bg-danger"></span>
+            <i class="fas fa-user"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-end shadow" style="margin-right: 50px;">
             <a class="dropdown-item" href="#">

@@ -1,30 +1,17 @@
 <div class="container-fluid">
   <!-- Detail -->
-  <div class="row justify-content-center">
-    <div class="card shadow mt-4 mx-5" style="max-width: 1000px;">
-      <div class="row g-0">
-        <div class="col-md-3">
-          <img src="<?php echo base_url('assets/imgcover/' . $detail->gambar) ?>" class="img-fluid rounded-start my-4" alt="...">
-        </div>
-        <div class="col-md-5">
-          <div class="card-body">
-            <h5 class="card-title fw-bold" style="font-size: x-large;"><?php echo $detail->nama_produk ?></h5>
-            <p class="dharga">Rp <?php echo number_format($detail->harga, 0) ?></p>
-            <table class="table">
-              <td>Kategori</td>
-              <td><?php echo $detail->kategori ?></td>
-              </tr>
-              <tr>
-                <td>Rasa</td>
-                <td>Rasa yang tertinggal</td>
-              </tr>
-            </table>
-            <p class="deskP text-black-50"><?php echo $detail->deskripsi ?></p>
+  <section class="px-5">
+    <div class="container px-4 px-lg-5 my-5">
+      <div class="row gx-4 gx-lg-5 align-items-center">
+        <div class="col-md-4"><img class="card-img-top mb-5 mb-md-0" src="<?php echo base_url('assets/imgcover/' . $detail->gambar) ?>" alt="..." /></div>
+        <div class="col-md-8">
+          <h1 class="display-5 fw-bolder"><?php echo $detail->nama_produk ?></h1>
+          <h6 class="text-black">Kategori : <?php echo $detail->kategori ?></h6>
+          <div class="dharga fs-5 mb-5">
+            <span>Rp <?php echo number_format($detail->harga, 0) ?></span>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-body">
-            <h5 class="card-title fw-bold" style="font-size: x-large;">Atur Jumlah Produk</h5>
+          <p class="deskP lead"><?php echo $detail->deskripsi ?>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
+          <div class="d-flex">
             <?php
             echo form_open('Belanja/add');
             echo form_hidden('id', $detail->id_produk);
@@ -32,39 +19,35 @@
             echo form_hidden('name', $detail->nama_produk);
             echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
             ?>
-            <!-- Jumlah Item -->
             <div class="row">
-              <div class="col-md-6">
-                <div class="mt-3">
-                  <div class="input-group mt-3">
-                    <span class="input-group-btn">
-                      <button type="button" class="btn btn-success btnplusmin btn-sm" data-type="minus" data-field="qty">
-                        <span class='bx bx-minus'></span>
-                      </button>
-                    </span>
-                    <input type="text" name="qty" class="form-control qty text-center" style="height: 31px;" value="1" min="1" max="100">
-                    <span class="input-group-btn">
-                      <button type="button" class="btn btn-success btnplusmin btn-sm" data-type="plus" data-field="qty">
-                        <span class="bx bx-plus"></span>
-                      </button>
-                    </span>
-                  </div>
+              <div class="col-md-5">
+                <div class="input-group">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-outline-info btnplusmin" data-type="minus" data-field="qty">
+                      <span class='bx bx-minus'></span>
+                    </button>
+                  </span>
+                  <input type="text" name="qty" class="form-control qty text-center" value="1" min="1" max="100">
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-outline-info btnplusmin" data-type="plus" data-field="qty">
+                      <span class="bx bx-plus"></span>
+                    </button>
+                  </span>
                 </div>
               </div>
-            </div>
-            <!-- End Jumlah Item -->
-            <div class="card-body">
-              <div class="row">
-                <button type="submit" class="btn btnCart btn-md btn-warning swalDefaultSuccess mb-2">Tambah <i class="fa-solid fa-cart-plus"></i></button>
-                <button class="btn btnBuy btn-outline-success">Beli Langsung</button>
+              <div class="col-md-7">
+                <button type="submit" class="btn btnCart btn-outline-info swalDefaultSuccess">
+                  Tambah
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
               </div>
             </div>
+            <?php echo form_close(); ?>
           </div>
-          <?php echo form_close(); ?>
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- End Detail -->
 </div>
 
@@ -76,7 +59,6 @@
   }
 
   .btnCart,
-  .btnBuy,
   .qty,
   .btnB {
     font-weight: 500;

@@ -15,7 +15,7 @@ class Pelanggan extends CI_Controller
     $this->load->model('Transaksi_m');
   }
 
-  // List all your items
+  // Daftar Akun
   public function register()
   {
     $this->form_validation->set_rules('nama_pelanggan', 'Nama Pelanggan', 'required', array('required' => '%s Harus Diisi!'));
@@ -54,7 +54,9 @@ class Pelanggan extends CI_Controller
       redirect('Pelanggan/login');
     }
   }
+  // End
 
+  // Login dan Logout
   public function login()
   {
     $this->form_validation->set_rules('email', 'E-mail', 'required', array(
@@ -79,6 +81,7 @@ class Pelanggan extends CI_Controller
     // $this->cart->destroy();
     $this->pelanggan_login->logout();
   }
+  // End
 
   public function akun()
   {

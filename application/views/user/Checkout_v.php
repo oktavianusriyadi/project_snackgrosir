@@ -8,39 +8,37 @@
           <small class="text-muted float-end">Tanggal : <?php echo date('d - m - Y') ?></small>
         </div>
         <div class="card-body">
-          <div class="row">
-            <div class="col-md-12">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>QTY</th>
-                    <th>Produk</th>
-                    <th>Berat</th>
-                    <th>Harga</th>
-                    <th>Total Harga</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php
-                  $i = 1;
-                  $tot_berat = 0;
-                  foreach ($this->cart->contents() as $items) {
-                    $produk = $this->Beranda_m->detail_produk($items['id']);
-                    $berat = $items['qty'] * $produk->berat;
-                    $tot_berat = $tot_berat + $berat;
-                  ?>
-                    <tr>
-                      <td style="text-align: left;"><?php echo $items['qty']; ?></td>
-                      <td style="text-align: left;"><?php echo $items['name']; ?></td>
-                      <td style="text-align: left;"><?php echo $berat ?> Gram</td>
-                      <td style="text-align: left;">Rp <?php echo number_format($items['price'], 0); ?></td>
-                      <td style="text-align: left;">Rp <?php echo number_format($items['subtotal'], 0); ?></td>
-                    </tr>
-                  <?php } ?>
-                </tbody>
-              </table>
+          <section class="mb-3">
+            <div class="container px-4">
+              <div class="row align-items-center">
+                <?php
+                $i = 1;
+                $tot_berat = 0;
+                foreach ($this->cart->contents() as $items) {
+                  $produk = $this->Beranda_m->detail_produk($items['id']);
+                  $berat = $items['qty'] * $produk->berat;
+                  $tot_berat = $tot_berat + $berat;
+                ?>
+                  <div class="col-md-2 mb-3"><img class="card-img-top mb-md-0" src="<?php echo base_url('assets/imgcover/' . $produk->gambar); ?>" alt="..." /></div>
+                  <div class="col-md-10">
+                    <h4 class="fw-bolder"><?php echo $items['name']; ?></h4>
+                    <h6 class="text-black"><?php echo $berat ?> Gram</h6>
+                    <section class="mb-3">
+                      <div class=" row fw-bold">
+                        <div class="col-md-5 col-7">
+                          <?php echo $items['qty']; ?> x Rp <?php echo number_format($items['price'], 0); ?>
+                        </div>
+                        <div class="col-md-5 col-5 text-lg-end">
+                          Rp <?php echo number_format($items['subtotal'], 0); ?>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <hr>
+                <?php } ?>
+              </div>
             </div>
-          </div>
+          </section>
           <?php
           //Notifikasi Form Kosong
           echo validation_errors('<div class="alert alert-danger alert-dismissible" role="alert">
