@@ -1,46 +1,17 @@
 <div class="container-fluid">
   <!--Banner-->
-  <div id="carouselExampleDark" class="banner carousel carousel-dark slide mt-4" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="3000">
-        <img src="<?php echo base_url() ?>assets/banner/banner1.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
-      </div>
-      <div class="carousel-item" data-bs-interval="3000">
-        <img src="<?php echo base_url() ?>assets/banner/banner2.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="<?php echo base_url() ?>assets/banner/banner1.jpg" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  <img src="<?php echo base_url() ?>assets/banner/banner1.jpg" class="banner img-fluid mt-4 shadow" alt="...">
   <!--EndBanner-->
 
   <!-- Navbar Kategori -->
   <nav class="navbar navbar-expand-lg shadow rounded navbar-light mb-3">
     <div class="container-fluid">
-      <div class="navbar-brand text-black text-uppercase">Kategori</div>
+      <a class="navbar-brand text-black text-uppercase" href="<?php echo base_url('Beranda/Allproduk/') ?>">Kategori</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#kategori" aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="kategori">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link navproduk" aria-current="page" href="<?php echo base_url('Beranda/Allproduk/') ?>">All Product</a>
-          </li>
+        <ul class="navbar-nav mb-lg-0">
           <?php $kategori = $this->Beranda_m->tampil_data_kategori(); ?>
           <?php foreach ($kategori as $key => $value) { ?>
             <li class="nav-item">

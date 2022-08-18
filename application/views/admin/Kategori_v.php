@@ -36,9 +36,9 @@
                           <td class="text-center"><?php echo $no++; ?></td>
                           <td><?php echo $value->kategori ?></td>
                           <td>
-                            <button class="btn btn-secondary btn-sm">
+                            <!-- <button class="btn btn-secondary btn-sm">
                               <i class="fas fa-search-plus"></i>
-                            </button>
+                            </button> -->
                             <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#update<?php echo $value->id_kategori ?>">
                               <i class="bx bx-edit"></i>
                             </button>
@@ -90,7 +90,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title">Update User</h5>
+                      <h5 class="modal-title">Update Kategori</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">

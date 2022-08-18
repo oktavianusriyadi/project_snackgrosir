@@ -20,7 +20,7 @@
             echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
             ?>
             <div class="row">
-              <div class="col-md-5">
+              <div class="col-md-5 col-8">
                 <div class="input-group">
                   <span class="input-group-btn">
                     <button type="button" class="btn btn-outline-info btnplusmin" data-type="minus" data-field="qty">
@@ -35,9 +35,8 @@
                   </span>
                 </div>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-7 col-4">
                 <button type="submit" class="btn btnCart btn-outline-info swalDefaultSuccess">
-                  Tambah
                   <i class="fa-solid fa-cart-plus"></i>
                 </button>
               </div>

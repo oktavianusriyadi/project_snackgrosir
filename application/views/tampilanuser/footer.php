@@ -1,48 +1,5 @@
 <!-- Up Button -->
 <a id="button"></a>
-<style>
-  #button {
-    text-decoration: none;
-    display: inline-block;
-    background-color: #FF9800;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition: background-color .3s,
-      opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-  }
-
-  #button::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
-    color: #fff;
-  }
-
-  #button:hover {
-    cursor: pointer;
-    background-color: #333;
-  }
-
-  #button:active {
-    background-color: #555;
-  }
-
-  #button.show {
-    opacity: 1;
-    visibility: visible;
-  }
-</style>
 
 <script>
   var btn = $('#button');
@@ -94,7 +51,7 @@
     &copy; <script>
       document.write(new Date().getFullYear())
     </script>
-    <a class="nama" href="#" style="text-decoration: none;">Snack Grosir Pontianak</a>
+    <a class="nama" href="<?php echo base_url('Beranda') ?>" style="text-decoration: none;">Snack Grosir Pontianak</a>
   </div>
   <!--EndCopyright-->
 </footer>
@@ -138,26 +95,4 @@
 <!-- Main JS -->
 <script src="<?php echo base_url('assets/js/main.js') ?>"></script>
 <!--CSS-->
-<style>
-  .footer {
-    margin-top: 5rem;
-  }
-
-  .alamat {
-    font-weight: 500;
-    text-align: justify;
-    color: black;
-  }
-
-  .nama {
-    color: black;
-    font-weight: bold;
-  }
-
-  .copy {
-    font-family: 'Times New Roman';
-    color: black;
-    font-weight: bold;
-  }
-</style>
 <!--EndCSS-->

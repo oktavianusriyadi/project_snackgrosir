@@ -38,9 +38,9 @@
                           <td class="text-center"><?php echo $value->username ?></td>
                           <td class="text-center"><?php echo $value->password ?></td>
                           <td>
-                            <button class="btn btn-secondary btn-sm">
+                            <!-- <button class="btn btn-secondary btn-sm">
                               <i class="fas fa-search-plus"></i>
-                            </button>
+                            </button> -->
                             <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#update<?php echo $value->id_user ?>">
                               <i class="bx bx-edit"></i>
                             </button>

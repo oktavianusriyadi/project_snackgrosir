@@ -51,9 +51,8 @@
           $jml_item = $jml_item + $value['qty'];
         }
         ?>
-        <a class="btn btn-outline-dark m-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
           <i class="fas fa-shopping-cart"></i>
-          Cart
           <span class="badge bg-success text-white ms-1 rounded-pill"><?php echo $jml_item ?></span>
         </a>
         <div class="offcanvas offcanvas-end" data-bs-scroll="true" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -129,13 +128,14 @@
           </div>
         </div>
         <!-- End of Cart -->
+        |
         <!-- User -->
         <?php if ($this->session->userdata('email') == "") { ?>
-          <a class="btn btn-outline-dark" style="margin-left: 5px;" href="<?php echo base_url('Pelanggan/login') ?>">
-            <b>Login</b>
+          <a class="text-decoration-none" style="color: black;" href="<?php echo base_url('Pelanggan/login') ?>">
+            <b>Log In</b>
           </a>
         <?php } else { ?>
-          <a class="btn btn-outline-dark" style="margin-left: 5px;" href="javascript:void(0);" data-bs-toggle="dropdown">
+          <a style="color: black;" href="javascript:void(0);" data-bs-toggle="dropdown">
             <!-- <h6>Hi, <?php echo $this->session->userdata('nama_pelanggan') ?></h6> -->
             <i class="fas fa-user"></i>
           </a>
@@ -162,15 +162,17 @@
         <!-- End Of User -->
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span><i class="fas fa-search"></i></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="d-flex flex-fill mt-3 mb-3">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
-        </form>
-        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        </ul> -->
+        <!-- Search -->
+        <div class="navbar-nav align-items-center">
+          <div class="nav-item d-flex align-items-center">
+            <i class="fas fa-search"></i>
+            <input type="text" class="form-control bg-light border-0 shadow-none" name="keyword" placeholder="Search..." aria-label="Search..." />
+          </div>
+        </div>
+        <!-- /Search -->
       </div>
     </div>
   </nav>

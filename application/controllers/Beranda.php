@@ -59,7 +59,6 @@ class Beranda extends CI_Controller
     $this->load->view('user/Detail_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
   }
-  // End
 }
 
 /* End of file Beranda.php */
