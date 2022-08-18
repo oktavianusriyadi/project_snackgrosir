@@ -59,6 +59,34 @@ class Beranda extends CI_Controller
     $this->load->view('user/Detail_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
   }
+
+  // Pencarian
+  public function cariProduk()
+  {
+    $config['base_url'] = '';
+
+    if ($this->input->post('keyword')) {
+      $data['keyword'] = $this->input->post('keyword');
+      $this->session->set_userdata('keyword', $data['keyword']);
+    } else {
+      $data['keyword'] = $this->input->post('keyword');
+    }
+
+    $this->db->like('nama_produk', $data['keyword']);
+    $this->db->from('tb_produk');
+
+    $config['total_rows'] = $this->db->count_all_results();
+
+    $data = array(
+      'total_rows' => $config['total_rows'],
+      'keyword' => $data['keyword'],
+      'produk' => $this->Beranda_m->tampil_data($data['keyword']),
+    );
+    $this->load->view('tampilanuser/header');
+    $this->load->view('user/Search_v', $data, FALSE);
+    $this->load->view('tampilanuser/footer');
+  }
+  // End Pencarian
 }
 
 /* End of file Beranda.php */

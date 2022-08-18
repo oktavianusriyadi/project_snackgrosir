@@ -5,8 +5,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Beranda_m extends CI_Model
 {
   // Mengambil Data Untuk Tampilkan Semua Produk
-  public function tampil_data()
+  public function tampil_data($keyword = NULL)
   {
+    // Pencarian
+    if ($keyword) {
+      $this->db->like('nama_produk', $keyword);
+    }
+    // Pencarian
     $this->db->select('*');
     $this->db->from('tb_produk');
     $this->db->join('tb_kategori', 'tb_kategori.id_kategori = tb_produk.id_kategori', 'left');
@@ -60,6 +65,8 @@ class Beranda_m extends CI_Model
     return $this->db->get()->result();
   }
   // End
+
+
 }
 
 /* End of file Beranda_m.php */

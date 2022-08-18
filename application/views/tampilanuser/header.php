@@ -167,10 +167,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Search -->
         <div class="navbar-nav align-items-center">
-          <div class="nav-item d-flex align-items-center">
-            <i class="fas fa-search"></i>
-            <input type="text" class="form-control bg-light border-0 shadow-none" name="keyword" placeholder="Search..." aria-label="Search..." />
-          </div>
+          <form action="<?php echo base_url('beranda/cariProduk'); ?>" method="post">
+            <div class="nav-item d-flex align-items-center">
+              <button class="btn btn-outline-dark" type="submit" name="submit"><i class="fas fa-search"></i></button>
+              <input type="text" class="form-control bg-light border-0 shadow-none" name="keyword" placeholder="Search..." aria-label="Search..." />
+            </div>
+          </form>
         </div>
         <!-- /Search -->
       </div>
