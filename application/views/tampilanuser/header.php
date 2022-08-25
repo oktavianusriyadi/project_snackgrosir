@@ -34,7 +34,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 
-  <title>Snack Grosir</title>
+  <title>SGP | <?= $title ?></title>
 </head>
 
 <body>

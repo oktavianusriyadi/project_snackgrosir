@@ -43,7 +43,7 @@
           <?php echo form_close() ?>
           <p class="text-center mt-4">
             <span>Belum Punya Akun?</span>
-            <a href="<?php echo base_url('Pelanggan/register') ?>">
+            <a href="<?php echo base_url('Pelanggan/register') ?>" class="text-decoration-none">
               <span>Daftar</span>
             </a>
           </p>

@@ -45,7 +45,7 @@
           <?php echo form_close() ?>
           <p class="text-center">
             <span>Sudah Punya akun?</span>
-            <a href="<?php echo base_url('Pelanggan/login') ?>">
+            <a href="<?php echo base_url('Pelanggan/login') ?>" class="text-decoration-none">
               <span>Login</span>
             </a>
           </p>

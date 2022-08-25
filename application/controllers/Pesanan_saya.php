@@ -16,13 +16,14 @@ class Pesanan_saya extends CI_Controller
   public function index()
   {
     $data = array(
+      'title' => 'PESANAN SAYA',
       'pesanan' => $this->Transaksi_m->pesanan(),
       'dikemas' => $this->Transaksi_m->dikemas(),
       'dikirim' => $this->Transaksi_m->dikirim(),
       'selesai' => $this->Transaksi_m->selesai(),
       'detail' => $this->Transaksi_m->detail(),
     );
-    $this->load->view('tampilanuser/header');
+    $this->load->view('tampilanuser/header', $data);
     $this->load->view('user/Pesanan_saya_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
   }
@@ -60,10 +61,11 @@ class Pesanan_saya extends CI_Controller
     }
     //
     $data = array(
+      'title' => 'PEMBAYARAN',
       'bayar' => $this->Transaksi_m->detail_pesanan($id_transaksi),
       'rekening' => $this->Transaksi_m->rekening(),
     );
-    $this->load->view('tampilanuser/header');
+    $this->load->view('tampilanuser/header', $data);
     $this->load->view('user/Bayar_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
   }

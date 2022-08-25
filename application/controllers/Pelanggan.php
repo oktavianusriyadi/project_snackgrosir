@@ -38,9 +38,12 @@ class Pelanggan extends CI_Controller
         'matches' => '%s Tidak Sama!'
       )
     );
+    $data = array(
+      'title' => 'DAFTAR AKUN',
+    );
 
     if ($this->form_validation->run() == FALSE) {
-      $this->load->view('tampilanuser/header');
+      $this->load->view('tampilanuser/header', $data);
       $this->load->view('user/Register_v');
       $this->load->view('tampilanuser/footer');
     } else {
@@ -71,7 +74,12 @@ class Pelanggan extends CI_Controller
       $password = $this->input->post('password');
       $this->pelanggan_login->login($email, $password);
     }
-    $this->load->view('tampilanuser/header');
+
+    $data = array(
+      'title' => 'LOGIN PELANGGAN',
+    );
+    
+    $this->load->view('tampilanuser/header', $data);
     $this->load->view('user/Login_pelanggan');
     $this->load->view('tampilanuser/footer');
   }
@@ -89,9 +97,10 @@ class Pelanggan extends CI_Controller
     $this->pelanggan_login->proteksi_hal();
     //
     $data = array(
+      'title' => 'AKUN SAYA',
       'akun' => $this->Pelanggan_m->tampil_akun(),
     );
-    $this->load->view('tampilanuser/header');
+    $this->load->view('tampilanuser/header', $data);
     $this->load->view('user/Akun_v', $data, FALSE);
     $this->load->view('tampilanuser/footer');
   }

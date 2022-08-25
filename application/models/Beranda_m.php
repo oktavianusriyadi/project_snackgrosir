@@ -5,20 +5,30 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Beranda_m extends CI_Model
 {
   // Mengambil Data Untuk Tampilkan Semua Produk
-  public function tampil_data($keyword = NULL)
+  public function tampil_data($number, $offset)
+  {
+
+    //$this->db->select('*');
+    // $this->db->from('tb_produk');
+    // $this->db->join('tb_kategori', 'tb_kategori.id_kategori = tb_produk.id_kategori', 'left');
+    // $this->db->order_by('id_produk', 'desc');
+    // return $this->db->get($number,$offset)->result();
+    return $query = $this->db->get('tb_produk', $number, $offset)->result();
+  }
+  // End
+
+  public function tampil_produk($keyword = NULL)
   {
     // Pencarian
     if ($keyword) {
       $this->db->like('nama_produk', $keyword);
     }
-    // Pencarian
     $this->db->select('*');
     $this->db->from('tb_produk');
     $this->db->join('tb_kategori', 'tb_kategori.id_kategori = tb_produk.id_kategori', 'left');
     $this->db->order_by('id_produk', 'desc');
     return $this->db->get()->result();
   }
-  // End
 
   // Mengambil Data Untuk Detail Produk
   public function detail_produk($id_produk)
@@ -66,7 +76,10 @@ class Beranda_m extends CI_Model
   }
   // End
 
-
+  function jumlah_data_produk()
+  {
+    return $this->db->get('tb_produk')->num_rows();
+  }
 }
 
 /* End of file Beranda_m.php */

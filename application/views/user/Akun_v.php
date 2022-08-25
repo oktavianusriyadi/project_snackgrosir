@@ -11,43 +11,31 @@
           echo $this->session->flashdata('pesan');
           echo '</div>';
         }
-        echo form_open('Pelanggan/akun'); ?>
+        echo form_open('Belanja/checkout'); ?>
         <div class="row">
           <div class="mb-3 col-md-6">
-            <label for="firstName" class="form-label">Nama Lengkap</label>
-            <input name="nama_pelanggan" value="<?php echo $this->session->userdata('nama_pelanggan') ?>" class="form-control">
+            <label class="form-label"><strong>Nama Lengkap</strong></label>
+            <input name="nama_penerima" class="form-control" required>
           </div>
           <div class="mb-3 col-md-6">
-            <label for="email" class="form-label">E-mail</label>
-            <input name="email" value="<?php echo $this->session->userdata('email') ?>" class="form-control">
+            <label class="form-label"><strong>No. Telepon</strong></label>
+            <input name="no_tlp_penerima" class="form-control" required>
           </div>
           <div class="mb-3 col-md-6">
-            <label class="form-label" for="phoneNumber">No. Telepon</label>
-            <input name="no_tlp" class="form-control">
+            <label class="form-label"><strong>Alamat</strong></label>
+            <textarea name="alamat" class="form-control" rows="1" placeholder="Alamat" required></textarea>
           </div>
           <div class="mb-3 col-md-6">
-            <label for="address" class="form-label">Alamat</label>
-            <textarea name="alamat" class="form-control" rows="1"></textarea>
+            <label class="form-label"><strong>Kode POS</strong></label>
+            <input name="kode_pos" class="form-control" placeholder="Kode Pos" required>
           </div>
-
           <div class="mb-3 col-md-6">
-            <label class="form-label">Provinsi</label>
+            <label class="form-label"><strong>Provinsi</strong></label>
             <select name="provinsi" class="form-select"></select>
           </div>
           <div class="mb-3 col-md-6">
-            <label class="form-label">Kota/Kabupaten</label>
+            <label class="form-label"><strong>Kota/Kabupaten</strong></label>
             <select name="kota" class="form-select"></select>
-          </div>
-          <div class="mb-3 col-md-6">
-            <label class="form-label">Kode POS</label>
-            <input name="kode_pos" class="form-control">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Password</label>
-            <div class="input-group">
-              <input type="password" value="<?php echo $this->session->userdata('nama_pelanggan') ?>" class="form-control">
-              <button class="btn btn-danger">Ubah Pasword</button>
-            </div>
           </div>
         </div>
         <div class="mt-2">
@@ -60,3 +48,33 @@
     <!-- /Account -->
   </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+    //Menampilkan Data Provinsi
+    $.ajax({
+      type: "POST",
+      url: "<?php echo base_url('Rajaongkir/provinsi') ?>",
+      success: function(hasil_provinsi) {
+        //console.log(hasil_provinsi);
+        $("select[name=provinsi]").html(hasil_provinsi);
+      }
+    });
+
+    //Menampilkan Data Kota
+    $("select[name=provinsi]").on("change", function() {
+      //Ambil data provinsi terpilih
+      var id_provinsi_terpilih = $("option:selected", this).attr("id_provinsi");
+
+      $.ajax({
+        type: "POST",
+        url: "<?php echo base_url('Rajaongkir/kota') ?>",
+        data: 'id_provinsi=' + id_provinsi_terpilih,
+        success: function(hasil_kota) {
+          // console.log(hasil_kota);
+          $("select[name=kota]").html(hasil_kota);
+        }
+      });
+    });
+  });
+</script>

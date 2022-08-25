@@ -1,4 +1,9 @@
 <div class="container-fluid">
+  <div class="mt-3">
+    <a href="<?php echo base_url('Beranda'); ?>" class="btn btn-outline-primary fw-bold text-decoration-none">
+      Kembali
+    </a>
+  </div>
   <!-- Detail -->
   <section class="px-5">
     <div class="container px-4 px-lg-5 my-5">
@@ -10,7 +15,7 @@
           <div class="dharga fs-5 mb-5">
             <span>Rp <?php echo number_format($detail->harga, 0) ?></span>
           </div>
-          <p class="deskP lead"><?php echo $detail->deskripsi ?>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
+          <p class="deskP lead"><?php echo $detail->deskripsi ?></p>
           <div class="d-flex">
             <?php
             echo form_open('Belanja/add');

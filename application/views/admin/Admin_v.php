@@ -43,7 +43,7 @@
                 </div>
               </div>
 
-              <div class="col-sm-6 col-lg-3 mb-4">
+              <!-- <div class="col-sm-6 col-lg-3 mb-4">
                 <div class="card cardD shadow text-center">
                   <a href="<?php echo base_url('admin/Admin'); ?>">
                     <div class="row">
@@ -61,7 +61,7 @@
                     </div>
                   </a>
                 </div>
-              </div>
+              </div> -->
 
               <div class="col-sm-6 col-lg-3 mb-4">
                 <div class="card cardD shadow text-center">

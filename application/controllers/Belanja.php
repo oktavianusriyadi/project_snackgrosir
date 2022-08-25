@@ -19,7 +19,11 @@ class Belanja extends CI_Controller
     if (empty($this->cart->contents())) {
       redirect('Beranda');
     }
-    $this->load->view('tampilanuser/header');
+    $data = array(
+      'title' => 'KERANJANG',
+    );
+
+    $this->load->view('tampilanuser/header', $data);
     $this->load->view('user/Belanja_v');
     $this->load->view('tampilanuser/footer');
   }
@@ -78,7 +82,11 @@ class Belanja extends CI_Controller
     $this->form_validation->set_rules('expedisi', 'Expedisi', 'required', array('required' => '%s Harus Diisi!'));
     $this->form_validation->set_rules('paket', 'Paket', 'required', array('required' => '%s Harus Diisi!'));
     if ($this->form_validation->run() == FALSE) {
-      $this->load->view('tampilanuser/header');
+      $data = array(
+        'title' => 'HALAMAN CHECKOUT',
+      );
+
+      $this->load->view('tampilanuser/header', $data);
       $this->load->view('user/Checkout_v');
       $this->load->view('tampilanuser/footer');
     } else {

@@ -6,7 +6,7 @@
   <!-- Navbar Kategori -->
   <nav class="navbar navbar-expand-lg shadow rounded navbar-light mb-3">
     <div class="container-fluid">
-      <a class="navbar-brand text-black text-uppercase" href="<?php echo base_url('Beranda/Allproduk/') ?>">Kategori</a>
+      <div class="navbar-brand text-black text-uppercase">Kategori</div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#kategori" aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
@@ -41,7 +41,7 @@
               ?>
               <a href="<?php echo base_url('Beranda/detail_produk/' . $value->id_produk); ?>" class="detail">
                 <div class="card produk shadow bg-body rounded" style="max-height: 550px; text-decoration: none;">
-                  <img src="<?php echo base_url('assets/imgcover/' . $value->gambar) ?>" class="card-img-top" alt="...">
+                  <img src="<?php echo base_url('assets/imgcover/' . $value->gambar) ?>" class="card-img-top" style="max-height: 250px;" alt="...">
                   <div class="card-body">
                     <h6 class="card-title nampro mb-1 text-center"><?php echo $value->nama_produk ?></h6>
                     <p></p>
@@ -59,6 +59,7 @@
             </div>
           <?php } ?>
         </div>
+        <?php echo $this->pagination->create_links(); ?>
       </div>
     </div>
   </div>

@@ -8,49 +8,51 @@
           <small class="text-muted float-end">Tanggal : <?php echo date('d - m - Y') ?></small>
         </div>
         <div class="card-body">
-          <section class="mb-3">
-            <div class="container px-4">
-              <div class="row align-items-center">
-                <?php
-                $i = 1;
-                $tot_berat = 0;
-                foreach ($this->cart->contents() as $items) {
-                  $produk = $this->Beranda_m->detail_produk($items['id']);
-                  $berat = $items['qty'] * $produk->berat;
-                  $tot_berat = $tot_berat + $berat;
-                ?>
-                  <div class="col-md-2 mb-3"><img class="card-img-top mb-md-0" src="<?php echo base_url('assets/imgcover/' . $produk->gambar); ?>" alt="..." /></div>
-                  <div class="col-md-10">
-                    <h4 class="fw-bolder"><?php echo $items['name']; ?></h4>
-                    <h6 class="text-black"><?php echo $berat ?> Gram</h6>
-                    <section class="mb-3">
-                      <div class=" row fw-bold">
-                        <div class="col-md-5 col-7">
-                          <?php echo $items['qty']; ?> x Rp <?php echo number_format($items['price'], 0); ?>
-                        </div>
-                        <div class="col-md-5 col-5 text-lg-end">
-                          Rp <?php echo number_format($items['subtotal'], 0); ?>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                  <hr>
-                <?php } ?>
-              </div>
-            </div>
-          </section>
-          <?php
-          //Notifikasi Form Kosong
-          echo validation_errors('<div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>', '</div>');
-          echo form_open('Belanja/checkout');
-          $no_order = date('dmy') . strtoupper(random_string('alnum', 8));
-          ?>
           <div class="row">
-            <div class="col-md-8">
-              <p><strong>Tujuan Pengiriman : </strong></p>
-              <hr>
+            <div class="col-md-5">
+              <section class="mb-3">
+                <div class="container px-4">
+                  <div class="row align-items-center">
+                    <?php
+                    $i = 1;
+                    $tot_berat = 0;
+                    foreach ($this->cart->contents() as $items) {
+                      $produk = $this->Beranda_m->detail_produk($items['id']);
+                      $berat = $items['qty'] * $produk->berat;
+                      $tot_berat = $tot_berat + $berat;
+                    ?>
+                      <div class="col-md-3 mb-3"><img class="card-img-top mb-md-0" src="<?php echo base_url('assets/imgcover/' . $produk->gambar); ?>" alt="..." /></div>
+                      <div class="col-md-9">
+                        <h6 class="fw-bolder"><?php echo $items['name']; ?></h6>
+                        <h6 class="text-black"><?php echo $berat ?> Gram</h6>
+                        <section class="mb-3">
+                          <div class=" row fw-bold">
+                            <div class="col-md-5 col-7">
+                              <?php echo $items['qty']; ?> x Rp <?php echo number_format($items['price'], 0); ?>
+                            </div>
+                            <div class="col-md-5 col-5 text-lg-end">
+                              Rp <?php echo number_format($items['subtotal'], 0); ?>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                      <hr>
+                    <?php } ?>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-md-7">
+              <?php
+              //Notifikasi Form Kosong
+              echo validation_errors('<div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>', '</div>');
+              echo form_open('Belanja/checkout');
+              $no_order = date('dmy') . strtoupper(random_string('alnum', 8));
+              ?>
               <div class="row">
+                <p><strong>Tujuan Pengiriman : </strong></p>
+                <hr>
                 <div class="col-md-6">
                   <div class="mb-3">
                     <label class="form-label"><strong>Nama Penerima</strong></label>
@@ -101,6 +103,9 @@
                 </div>
               </div>
             </div>
+          </div>
+          <hr>
+          <div class="row justify-content-end">
             <div class="col-md-4">
               <p><strong>Total :</strong></p>
               <hr>
