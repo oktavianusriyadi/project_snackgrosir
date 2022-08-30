@@ -10,7 +10,7 @@ class User extends CI_Controller
   {
     parent::__construct();
     //Load Dependencies
-    $this->load->model('admin/User_m');
+    $this->load->model('User_m');
   }
 
   // List all your items

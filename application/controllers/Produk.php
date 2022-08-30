@@ -10,7 +10,7 @@ class Produk extends CI_Controller
     parent::__construct();
     //Load Dependencies
     $this->load->model('Produk_m');
-    $this->load->model('admin/Kategori_m');
+    $this->load->model('Kategori_m');
   }
 
   // List all your items

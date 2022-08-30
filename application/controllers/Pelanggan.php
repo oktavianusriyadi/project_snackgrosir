@@ -11,7 +11,7 @@ class Pelanggan extends CI_Controller
     parent::__construct();
     //Load Dependencies
     $this->load->model('Pelanggan_m');
-    $this->load->model('admin/Auth_m');
+    $this->load->model('Auth_m');
     $this->load->model('Transaksi_m');
   }
 

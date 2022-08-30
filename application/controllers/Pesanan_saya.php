@@ -10,7 +10,7 @@ class Pesanan_saya extends CI_Controller
     parent::__construct();
     //Do your magic here
     $this->load->model('Transaksi_m');
-    $this->load->model('admin/Pesanan_m');
+    $this->load->model('Pesanan_m');
   }
   //Pesanan
   public function index()

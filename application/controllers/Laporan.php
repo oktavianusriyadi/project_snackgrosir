@@ -10,7 +10,7 @@ class Laporan extends CI_Controller
   {
     parent::__construct();
     //Do your magic here
-    $this->load->model('admin/Laporan_m');
+    $this->load->model('Laporan_m');
   }
 
 

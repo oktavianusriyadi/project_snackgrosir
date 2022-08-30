@@ -10,7 +10,7 @@ class Rajaongkir extends CI_Controller
   {
     parent::__construct();
     //Load Dependencies
-    $this->load->model('admin/Admin_m');
+    $this->load->model('Admin_m');
   }
 
   private $api_key = 'c1d52a23c32c9c511d40cee333691556';

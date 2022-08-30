@@ -9,7 +9,7 @@ class User_login
   public function __construct()
   {
     $this->ci = &get_instance();
-    $this->ci->load->model('admin/Auth_m');
+    $this->ci->load->model('Auth_m');
   }
 
   public function login($username, $password)

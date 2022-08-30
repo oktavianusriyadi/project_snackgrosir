@@ -10,7 +10,7 @@ class Pesanan extends CI_Controller
   {
     parent::__construct();
     //Load Dependencies
-    $this->load->model('admin/Pesanan_m');
+    $this->load->model('Pesanan_m');
   }
 
   // List all your items
