@@ -35,7 +35,7 @@ class User extends CI_Controller
     );
     $this->User_m->add($data);
     $this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan!');
-    redirect('admin/User');
+    redirect('User');
   }
 
   //Update one item
@@ -49,7 +49,7 @@ class User extends CI_Controller
     );
     $this->User_m->update($data);
     $this->session->set_flashdata('pesan', 'Data Berhasil Diupdate!');
-    redirect('admin/User');
+    redirect('User');
   }
 
   //Delete one item
@@ -58,7 +58,7 @@ class User extends CI_Controller
     $data = array('id_user' => $id_user);
     $this->User_m->delete($data);
     $this->session->set_flashdata('pesan', 'Data Berhasil Dihapus!');
-    redirect('admin/User');
+    redirect('User');
   }
 }
 

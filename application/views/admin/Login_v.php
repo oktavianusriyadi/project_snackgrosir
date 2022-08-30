@@ -79,7 +79,7 @@
             }
             //
 
-            echo form_open('admin/Auth/login_admin')
+            echo form_open('Auth/login_admin')
             ?>
             <div class="mb-3">
               <label for="username" class="form-label">Username</label>

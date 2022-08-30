@@ -7,12 +7,6 @@ class Beranda_m extends CI_Model
   // Mengambil Data Untuk Tampilkan Semua Produk
   public function tampil_data($number, $offset)
   {
-
-    //$this->db->select('*');
-    // $this->db->from('tb_produk');
-    // $this->db->join('tb_kategori', 'tb_kategori.id_kategori = tb_produk.id_kategori', 'left');
-    // $this->db->order_by('id_produk', 'desc');
-    // return $this->db->get($number,$offset)->result();
     return $query = $this->db->get('tb_produk', $number, $offset)->result();
   }
   // End

@@ -53,7 +53,7 @@
         ?>
         <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
           <i class="fas fa-shopping-cart"></i>
-          <span class="badge bg-success text-white ms-1 rounded-pill"><?php echo $jml_item ?></span>
+          <span class="badge bg-dark text-white ms-1 rounded-pill"><?php echo $jml_item ?></span>
         </a>
         <div class="offcanvas offcanvas-end" data-bs-scroll="true" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
           <div class="offcanvas-header">

@@ -15,7 +15,7 @@
                     echo '</div>';
                   }
 
-                  echo form_open('admin/Admin/setting'); ?>
+                  echo form_open('Admin/setting'); ?>
                   <div class="row">
                     <div class="col-xxl">
                       <div class="card-body">
@@ -57,7 +57,7 @@
                           <section>
                             <div class="row">
                               <div class="text-lg-end">
-                                <a href="<?php echo base_url('admin/Admin'); ?>" class="btn btn-secondary">Kembali</a>
+                                <a href="<?php echo base_url('Admin'); ?>" class="btn btn-secondary">Kembali</a>
                                 <button type="submit" class="btn btn-primary">Simpan</button>
                               </div>
                             </div>

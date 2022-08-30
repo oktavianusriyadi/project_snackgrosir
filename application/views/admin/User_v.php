@@ -66,7 +66,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <?php echo form_open('admin/User/add') ?>
+                    <?php echo form_open('User/add') ?>
                     <div class="mb-2">
                       <label class="form-label"><strong>Nama</strong></label>
                       <div class="input-group input-group-merge">
@@ -112,7 +112,7 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <?php echo form_open('admin/User/update/' . $value->id_user) ?>
+                      <?php echo form_open('User/update/' . $value->id_user) ?>
 
                       <div class="mb-2">
                         <label class="form-label"><strong>Nama</strong></label>
@@ -164,7 +164,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <a href="<?php echo base_url('admin/User/delete/' . $value->id_user) ?>" class="btn btn-primary">Hapus</a>
+                      <a href="<?php echo base_url('User/delete/' . $value->id_user) ?>" class="btn btn-primary">Hapus</a>
                     </div>
                   </div>
                 </div>

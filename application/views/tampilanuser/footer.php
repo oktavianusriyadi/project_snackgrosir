@@ -39,10 +39,10 @@
   <!--SocialMedia -->
   <section class="sosial">
     <!--Whatsapp-->
-    <a class="btn wa btn-secondary btn-floating m-2" href="#!" role="button"><i class="fa-brands fa-whatsapp"></i></a>
+    <a class="btn wa btn-secondary btn-floating m-2" href="https://wa.me/6285252394439" role="button"><i class="fa-brands fa-whatsapp"></i></a>
 
     <!--Instagram-->
-    <a class="btn ig btn-secondary btn-floating m-2" href="#!" role="button"><i class="fa-brands fa-instagram"></i></a>
+    <a class="btn ig btn-secondary btn-floating m-2" href="https://www.instagram.com/snackgrosirpontianak/" role="button"><i class="fa-brands fa-instagram"></i></a>
   </section>
   <!--EndSocialMedia -->
 
@@ -64,7 +64,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 <!--EndFontAwesome-->
 
-<!-- Notifications Cart -->
+<!-- Notifikasi Keranjang -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
   $(function() {
@@ -83,7 +83,7 @@
     });
   });
 </script>
-<!-- End Notifications Cart -->
+<!-- End Notifikasi Keranjang -->
 <script>
   window.setTimeout(function() {
     $(".alert").fadeTo(500.0).slideUp(500, function() {

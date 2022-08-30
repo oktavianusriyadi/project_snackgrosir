@@ -62,7 +62,7 @@ $this->user_login->proteksi_hal();
 
       <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
         <div class="app-brand demo">
-          <a href="<?php echo base_url('admin/Admin') ?>" class="app-brand-link">
+          <a href="<?php echo base_url('Admin') ?>" class="app-brand-link">
             <span class="app-brand-logo demo">
             </span>
             <span class="app-brand-text demo menu-text fw-bolder text-black ms-2">Snack Grosir</span>
@@ -78,7 +78,7 @@ $this->user_login->proteksi_hal();
         <ul class="menu-inner py-1">
           <!-- Dashboard -->
           <li class="menu-item">
-            <a href="<?php echo base_url('admin/Admin') ?>" class="menu-link">
+            <a href="<?php echo base_url('Admin') ?>" class="menu-link">
               <i class='menu-icon tf-icon bx bxs-dashboard'></i>
               <div data-i18n="Analytics">Dashboard</div>
             </a>
@@ -86,7 +86,7 @@ $this->user_login->proteksi_hal();
 
           <!-- Pelanggan -->
           <!-- <li class="menu-item">
-            <a href="<?php echo base_url('admin/Admin/pelanggan') ?>" class="menu-link">
+            <a href="<?php echo base_url('Admin/pelanggan') ?>" class="menu-link">
               <i class='menu-icon tf-icons bx bxs-user'></i>
               <div>Data Pelanggan</div>
             </a>
@@ -94,7 +94,7 @@ $this->user_login->proteksi_hal();
 
           <!-- Kategori -->
           <li class="menu-item">
-            <a href="<?php echo base_url('admin/Kategori') ?>" class="menu-link">
+            <a href="<?php echo base_url('Kategori') ?>" class="menu-link">
               <i class='menu-icon tf-icon bx bxs-category'></i>
               <div>Kategori Produk</div>
             </a>
@@ -102,7 +102,7 @@ $this->user_login->proteksi_hal();
 
           <!-- Pesanan -->
           <li class="menu-item">
-            <a href="<?php echo base_url('admin/Pesanan') ?>" class="menu-link">
+            <a href="<?php echo base_url('Pesanan') ?>" class="menu-link">
               <i class='menu-icon tf-icon bx bx-package'></i>
               <div data-i18n="Form Elements">Data Pesanan</div>
             </a>
@@ -118,7 +118,7 @@ $this->user_login->proteksi_hal();
 
           <!-- User -->
           <li class="menu-item">
-            <a href="<?php echo base_url('admin/User') ?>" class="menu-link">
+            <a href="<?php echo base_url('User') ?>" class="menu-link">
               <i class='menu-icon tf-icons bx bxs-user'></i>
               <div>Data User</div>
             </a>
@@ -126,7 +126,7 @@ $this->user_login->proteksi_hal();
 
           <!-- Laporan -->
           <li class="menu-item">
-            <a href="<?php echo base_url('admin/Laporan') ?>" class="menu-link">
+            <a href="<?php echo base_url('Laporan') ?>" class="menu-link">
               <i class='menu-icon tf-icon bx bxs-report'></i>
               <div data-i18n="Form Elements">Laporan</div>
             </a>
@@ -134,7 +134,7 @@ $this->user_login->proteksi_hal();
 
           <!-- Setting -->
           <li class="menu-item">
-            <a href="<?php echo base_url('admin/Admin/setting') ?>" class="menu-link">
+            <a href="<?php echo base_url('Admin/setting') ?>" class="menu-link">
               <i class='menu-icon tf-icon bx bxs-cog'></i>
               <div data-i18n="Form Elements">Setting</div>
             </a>

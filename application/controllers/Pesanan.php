@@ -36,7 +36,7 @@ class Pesanan extends CI_Controller
     );
     $this->Pesanan_m->update_order($data);
     $this->session->set_flashdata('pesan', 'Pesanan Berhasil Diproses Untuk Dikemas');
-    redirect('admin/Pesanan');
+    redirect('Pesanan');
   }
 
   public function kirim($id_transaksi)
@@ -48,7 +48,7 @@ class Pesanan extends CI_Controller
     );
     $this->Pesanan_m->update_order($data);
     $this->session->set_flashdata('pesan', 'Pesanan Berhasil Dikirim');
-    redirect('admin/Pesanan');
+    redirect('Pesanan');
   }
 }
 

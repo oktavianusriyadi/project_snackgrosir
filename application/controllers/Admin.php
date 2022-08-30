@@ -70,7 +70,7 @@ class Admin extends CI_Controller
       );
       $this->Admin_m->update($data);
       $this->session->set_flashdata('pesan', 'Setting Berhasil Di Ubah!');
-      redirect('admin/Admin/setting');
+      redirect('Admin/setting');
     }
   }
   // End Setting

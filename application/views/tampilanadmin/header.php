@@ -56,7 +56,7 @@
               <div class="dropdown-divider"></div>
             </li>
             <li>
-              <a class="dropdown-item" href="<?php echo base_url('admin/Auth/logout_admin') ?>">
+              <a class="dropdown-item" href="<?php echo base_url('Auth/logout_admin') ?>">
                 <i class="bx bx-power-off me-2"></i>
                 <span class="align-middle">Log Out</span>
               </a>

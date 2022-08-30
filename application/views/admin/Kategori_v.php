@@ -64,7 +64,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <?php echo form_open('admin/Kategori/add') ?>
+                    <?php echo form_open('Kategori/add') ?>
 
                     <div class="mb-2">
                       <label class="form-label"><strong>Kategori Produk</strong></label>
@@ -94,7 +94,7 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <?php echo form_open('admin/Kategori/update/' . $value->id_kategori) ?>
+                      <?php echo form_open('Kategori/update/' . $value->id_kategori) ?>
 
                       <div class="mb-2">
                         <label class="form-label"><strong>Kategori Produk</strong></label>
@@ -130,7 +130,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <a href="<?php echo base_url('admin/Kategori/delete/' . $value->id_kategori) ?>" class="btn btn-primary">Hapus</a>
+                      <a href="<?php echo base_url('Kategori/delete/' . $value->id_kategori) ?>" class="btn btn-primary">Hapus</a>
                     </div>
                   </div>
                 </div>

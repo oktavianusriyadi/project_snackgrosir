@@ -84,7 +84,7 @@
                                     <td>
                                       <?php if ($value->status_bayar == 1) { ?>
                                         <Button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#cek<?php echo $value->id_transaksi ?>">Bukti</Button>
-                                        <a href="<?php echo base_url('admin/Pesanan/dikemas/' . $value->id_transaksi) ?>" class="btn btn-sm btn-danger">Kemas</a>
+                                        <a href="<?php echo base_url('Pesanan/dikemas/' . $value->id_transaksi) ?>" class="btn btn-sm btn-danger">Kemas</a>
                                       <?php } ?>
                                     </td>
                                   </tr>
@@ -308,7 +308,7 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <?php echo form_open('admin/Pesanan/kirim/' . $value->id_transaksi) ?>
+                      <?php echo form_open('Pesanan/kirim/' . $value->id_transaksi) ?>
                       <table class="table">
                         <tr>
                           <th>Nama Penerima</th>

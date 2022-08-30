@@ -6,7 +6,7 @@
       <div class="col-md-4">
         <div class="card">
           <h5 class="card-header bg-primary text-white">Laporan Harian</h5>
-          <?php echo form_open('admin/Laporan/lap_harian') ?>
+          <?php echo form_open('Laporan/lap_harian') ?>
           <div class="card-body card-laporan">
             <div class="row mt-3">
               <div class="col-md-6">
@@ -58,7 +58,7 @@
       <div class="col-md-4">
         <div class="card">
           <h5 class="card-header bg-secondary text-white">Laporan Bulanan</h5>
-          <?php echo form_open('admin/Laporan/lap_bulanan') ?>
+          <?php echo form_open('Laporan/lap_bulanan') ?>
           <div class="card-body card-laporan">
             <div class="row mt-3">
               <div class="col-md-6">
@@ -99,7 +99,7 @@
       <div class="col-md-4">
         <div class="card">
           <h5 class="card-header bg-info text-white">Laporan Tahunan</h5>
-          <?php echo form_open('admin/Laporan/lap_tahunan') ?>
+          <?php echo form_open('Laporan/lap_tahunan') ?>
           <div class="card-body card-laporan">
             <div class="row mt-3">
               <div class="col-md-12">

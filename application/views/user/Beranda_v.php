@@ -50,7 +50,7 @@
                     </section>
                   </div>
                   <div class="card-body text-center">
-                    <button type="submit" class="btn btn-danger btn-md swalDefaultSuccess">Tambah <i class="fas fa-shopping-cart"></i></button>
+                    <button type="submit" class="btn btn-secondary btn-md swalDefaultSuccess">Tambah <i class="fas fa-shopping-cart"></i></button>
                     <!-- <button class="btn btn-primary btn-sm">Beli</button> -->
                   </div>
                 </div>

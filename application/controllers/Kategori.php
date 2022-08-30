@@ -33,7 +33,7 @@ class Kategori extends CI_Controller
     );
     $this->Kategori_m->add($data);
     $this->session->set_flashdata('pesan', 'Data Berhasil Ditambahkan!');
-    redirect('admin/Kategori');
+    redirect('Kategori');
   }
 
   //Update one item
@@ -45,7 +45,7 @@ class Kategori extends CI_Controller
     );
     $this->Kategori_m->update($data);
     $this->session->set_flashdata('pesan', 'Data Berhasil Diupdate!');
-    redirect('admin/Kategori');
+    redirect('Kategori');
   }
 
   //Delete one item
@@ -54,7 +54,7 @@ class Kategori extends CI_Controller
     $data = array('id_kategori' => $id_kategori);
     $this->Kategori_m->delete($data);
     $this->session->set_flashdata('pesan', 'Data Berhasil Dihapus!');
-    redirect('admin/Kategori');
+    redirect('Kategori');
   }
 }
 

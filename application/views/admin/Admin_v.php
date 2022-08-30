@@ -5,7 +5,7 @@
             <div class="row">
               <div class="col-sm-6 col-lg-3 mb-4">
                 <div class="card cardD shadow text-center">
-                  <a href="<?php echo base_url('admin/Pesanan'); ?>">
+                  <a href="<?php echo base_url('Pesanan'); ?>">
                     <div class="row">
                       <div class="col-4">
                         <div class="card-body">
@@ -65,7 +65,7 @@
 
               <div class="col-sm-6 col-lg-3 mb-4">
                 <div class="card cardD shadow text-center">
-                  <a href="<?php echo base_url('admin/User'); ?>">
+                  <a href="<?php echo base_url('User'); ?>">
                     <div class="row">
                       <div class="col-4">
                         <div class="card-body">
@@ -85,7 +85,7 @@
 
               <div class="col-sm-6 col-lg-3 mb-4">
                 <div class="card cardD shadow text-center">
-                  <a href="<?php echo base_url('admin/Kategori') ?>">
+                  <a href="<?php echo base_url('Kategori') ?>">
                     <div class="row">
                       <div class="col-4">
                         <div class="card-body text-decoration-none">
