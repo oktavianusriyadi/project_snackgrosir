@@ -116,6 +116,14 @@ $this->user_login->proteksi_hal();
             </a>
           </li>
 
+          <!-- Berat -->
+          <li class="menu-item">
+            <a href="<?php echo base_url('Admin/berat') ?>" class="menu-link">
+              <i class='menu-icon tf-icon bx bx-package'></i>
+              <div data-i18n="Form Elements">Data Berat</div>
+            </a>
+          </li>
+
           <!-- User -->
           <li class="menu-item">
             <a href="<?php echo base_url('User') ?>" class="menu-link">
@@ -137,6 +145,17 @@ $this->user_login->proteksi_hal();
             <a href="<?php echo base_url('Admin/setting') ?>" class="menu-link">
               <i class='menu-icon tf-icon bx bxs-cog'></i>
               <div data-i18n="Form Elements">Setting</div>
+            </a>
+          </li>
+
+          <!-- Log Out -->
+          <li class="menu-item">
+            <a href="<?php echo base_url('Admin/setting') ?>" class="menu-link">
+              <i class='menu-icon tf-icon bx bx-log-out'></i>
+              <div data-i18n="Form Elements">Log Out</div>
+              <div class="dropdown">
+                
+              </div>
             </a>
           </li>
         </ul>

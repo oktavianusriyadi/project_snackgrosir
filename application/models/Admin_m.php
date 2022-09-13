@@ -54,6 +54,9 @@ class Admin_m extends CI_Model
     $this->db->update('tb_setting', $data);
   }
   // End Setting
+
+  // Berat
+  // End Berat
 }
 
 /* End of file Admin_m.php */

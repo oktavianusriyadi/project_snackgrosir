@@ -72,6 +72,17 @@ class Admin extends CI_Controller
     }
   }
   // End Setting
+  public function berat()
+  {
+    $this->load->view('tampilanadmin/sidebar');
+    $this->load->view('tampilanadmin/header');
+    $this->load->view('admin/Berat_v');
+    $this->load->view('tampilanadmin/footer');
+  }
+
+
+  //Berat
+  // End Berat
 }
 
 /* End of file Admin.php */
