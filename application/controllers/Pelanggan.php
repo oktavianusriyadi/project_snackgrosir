@@ -78,9 +78,9 @@ class Pelanggan extends CI_Controller
     $data = array(
       'title' => 'LOGIN PELANGGAN',
     );
-    
+
     $this->load->view('tampilanuser/header', $data);
-    $this->load->view('user/Login_pelanggan');
+    $this->load->view('user/LoginP_v');
     $this->load->view('tampilanuser/footer');
   }
 
