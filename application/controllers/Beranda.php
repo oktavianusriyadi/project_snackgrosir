@@ -19,7 +19,7 @@ class Beranda extends CI_Controller
     $config['base_url'] = 'http://localhost/snack/beranda/index/';
 
     $config['total_rows'] = $this->Beranda_m->jumlah_data_produk(); // menghitung total produk 
-    $config['per_page'] = 18; // jumlah data produk yang ditampilkan per halaman
+    $config['per_page'] = 12; // jumlah data produk yang ditampilkan per halaman
     $data['start'] = $this->uri->segment(3);
 
     // Tampilan pagination

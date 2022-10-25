@@ -30,7 +30,7 @@
       <div class="my-1">
         <div class="row justify-content-center justify-content-md-start">
           <?php foreach ($produk as $key => $value) { ?>
-            <div class="col-lg-2 col-md-3 col-6 mb-3">
+            <div class="col-lg-3 col-md-3 col-6 mb-3">
               <?php
               echo form_open('Belanja/add');
               echo form_hidden('id', $value->id_produk);
