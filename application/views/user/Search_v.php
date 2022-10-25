@@ -39,7 +39,7 @@
       <div class="my-1">
         <div class="row justify-content-center justify-content-md-start">
           <?php foreach ($produk as $key => $value) { ?>
-            <div class="col-lg-2 col-md-3 col-6 mb-3">
+            <div class="col-lg-3 col-md-3 col-6 mb-3">
               <?php
               echo form_open('Belanja/add');
               echo form_hidden('id', $value->id_produk);
@@ -59,8 +59,8 @@
                     </section>
                   </div>
                   <div class="card-body text-center">
+                    <button type="submit" class="btn btn-warning btn-md swalDefaultSuccess">Detail <i class="fas fa-shopping-cart"></i></button>
                     <button type="submit" class="btn btn-danger btn-md swalDefaultSuccess">Tambah <i class="fas fa-shopping-cart"></i></button>
-                    <!-- <button class="btn btn-primary btn-sm">Beli</button> -->
                   </div>
                 </div>
               </a>
