@@ -1,25 +1,6 @@
 <!-- Up Button -->
 <a id="button"></a>
-
-<script>
-  var btn = $('#button');
-
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > 300) {
-      btn.addClass('show');
-    } else {
-      btn.removeClass('show');
-    }
-  });
-
-  btn.on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({
-      scrollTop: 0
-    }, '300');
-  });
-</script>
-<!-- //Up Button -->
+<script src="<?php echo base_url('assets/js/upbutton.js') ?>"></script>
 
 <footer class="footer text-center text-muted shadow-lg bg-body rounded-top">
   <div class="container border-bottom p-4">
@@ -29,7 +10,6 @@
       </div>
     </section>
   </div>
-
 
   <section class="alamat text-center">
     <p><i class="fas fa-store"></i> Jl. Camar No. 85A, Mariana, Kec. Pontianak Kota, Kota Pontianak, Kalimantan Barat 78112 </p>
@@ -60,30 +40,11 @@
 
 </html>
 
-<!--FontAwesome-->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-<!--EndFontAwesome-->
-
 <!-- Notifikasi Keranjang -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-  $(function() {
-    var Toast = Swal.mixin({
-      toast: true,
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000
-    });
-
-    $('.swalDefaultSuccess').click(function() {
-      Toast.fire({
-        icon: 'success',
-        title: 'Produk Ditambahkan Dalam Keranjang'
-      })
-    });
-  });
-</script>
+<script src="<?php echo base_url('assets/js/notifcart.js') ?>"></script>
 <!-- End Notifikasi Keranjang -->
+
 <script>
   window.setTimeout(function() {
     $(".alert").fadeTo(500.0).slideUp(500, function() {
@@ -92,7 +53,6 @@
   }, 3000)
 </script>
 
-<!-- Main JS -->
-<script src="<?php echo base_url('assets/js/main.js') ?>"></script>
+
 <!--CSS-->
 <!--EndCSS-->

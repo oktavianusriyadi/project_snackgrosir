@@ -32,6 +32,9 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <!-- End JQuery -->
 
+  <!-- Main JS -->
+  <script src="<?php echo base_url('assets/js/main.js') ?>"></script>
+  <!-- End Main Js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 
   <title>SGP | <?= $title ?></title>

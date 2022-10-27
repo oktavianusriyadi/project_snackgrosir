@@ -50,6 +50,38 @@
   }
   /* End Content */
 
+  /* Detail Produk */
+  .detail {
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .btnCart,
+  .qty,
+  .btnB {
+    font-weight: 500;
+    color: black;
+  }
+
+  .dharga {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+  }
+
+  .deskP,
+  .ketP {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+  }
+
+  .card-text,
+  .btnRasa {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: medium;
+  }
+  /* End Detail Produk */
+
   /* Footer */
   #button {
     text-decoration: none;

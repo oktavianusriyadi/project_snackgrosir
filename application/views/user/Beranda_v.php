@@ -39,22 +39,20 @@
               echo form_hidden('name', $value->nama_produk);
               echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
               ?>
-              <a href="<?php echo base_url('Beranda/detail_produk/' . $value->id_produk); ?>" class="detail">
-                <div class="card produk shadow bg-body rounded" style="max-height: 550px; text-decoration: none;">
-                  <img src="<?php echo base_url('assets/imgcover/' . $value->gambar) ?>" class="card-img-top" style="max-height: 250px;" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title nampro mb-1 text-center"><?php echo $value->nama_produk ?></h6>
-                    <p></p>
-                    <section class="text-center">
-                      <h5 class="harga">Rp <?php echo number_format($value->harga, 0) ?></h5>
-                    </section>
-                  </div>
-                  <div class="card-body text-center">
-                    <button type="submit" class="btn btn-warning btn-md swalDefaultSuccess">Detail <i class="fas fa-shopping-cart"></i></button>
-                    <button type="submit" class="btn btn-danger btn-md swalDefaultSuccess">Tambah <i class="fas fa-shopping-cart"></i></button>
-                  </div>
+              <div class="card produk shadow bg-body rounded" style="max-height: 550px; text-decoration: none;">
+                <img src="<?php echo base_url('assets/imgcover/' . $value->gambar) ?>" class="card-img-top" style="max-height: 250px;" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title nampro mb-1 text-center"><?php echo $value->nama_produk ?></h6>
+                  <p></p>
+                  <section class="text-center">
+                    <h5 class="harga">Rp <?php echo number_format($value->harga, 0) ?></h5>
+                  </section>
                 </div>
-              </a>
+                <div class="card-body text-center">
+                  <a href="<?php echo base_url('Beranda/detail_produk/' . $value->id_produk); ?>" class="btn btn-warning btn-md">Detail</a>
+                  <button type="submit" class="btn btn-danger btn-md swalDefaultSuccess">Tambah <i class="fas fa-shopping-cart"></i></button>
+                </div>
+              </div>
               <?php echo form_close(); ?>
             </div>
           <?php } ?>
