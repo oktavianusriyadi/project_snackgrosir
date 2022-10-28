@@ -55,11 +55,18 @@
     font-family: 'Ubuntu', sans-serif;
   }
 
-  .btnCart,
   .qty,
   .btnB {
     font-weight: 500;
     color: black;
+  }
+
+  .btnCart{
+    font-size: medium;
+    font-weight: 500;
+    color: black;
+    width: 14em;
+    border-color: black;
   }
 
   .dharga {
@@ -68,17 +75,25 @@
     font-size: x-large;
   }
 
-  .deskP,
-  .ketP {
-    font-family: 'Arial Narrow Bold', sans-serif;
-    font-size: 15px;
+  .detailPro {
+    font-size: 18px;
   }
 
-  .card-text,
-  .btnRasa {
+  .btnBerat{
+    font-size: medium;
+    color: black;
+  }
+
+  .card-text{
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     font-size: medium;
+  }
+
+  .card-image{
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
   }
   /* End Detail Produk */
 
@@ -146,6 +161,16 @@
     font-weight: bold;
   }
   /* End Footer */
+
+  /* Button Plus Min */
+  .btnplusmin{
+    font-size: medium;
+    font-weight: bold;
+    border-color: black;
+    color: black;
+
+  }
+  /* End Button Plus Min */
   /* ****** //CSS User ***** */
 
   /* ================================================================= */

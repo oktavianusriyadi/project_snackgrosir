@@ -13,6 +13,9 @@
       <div class="collapse navbar-collapse justify-content-center" id="kategori">
         <ul class="navbar-nav mb-lg-0">
           <?php $kategori = $this->Beranda_m->tampil_data_kategori(); ?>
+          <li class="nav-item">
+            <a class="nav-link navproduk" href="<?php echo base_url('Beranda') ?>">All Produk</a>
+          </li>
           <?php foreach ($kategori as $key => $value) { ?>
             <li class="nav-item">
               <a class="nav-link navproduk" href="<?php echo base_url('Beranda/kategori/' . $value->id_kategori) ?>"><?php echo $value->kategori ?></a>
@@ -49,8 +52,8 @@
                   </section>
                 </div>
                 <div class="card-body text-center">
-                  <a href="<?php echo base_url('Beranda/detail_produk/' . $value->id_produk); ?>" class="btn btn-warning btn-md">Detail</a>
-                  <button type="submit" class="btn btn-danger btn-md swalDefaultSuccess">Tambah <i class="fas fa-shopping-cart"></i></button>
+                  <a href="<?php echo base_url('Beranda/detail_produk/' . $value->id_produk); ?>" class="btn btn-sm btn-warning btn-md">Detail</a>
+                  <button type="submit" class="btn btn-danger btn-sm swalDefaultSuccess"> + <i class="fas fa-shopping-cart"></i></button>
                 </div>
               </div>
               <?php echo form_close(); ?>
