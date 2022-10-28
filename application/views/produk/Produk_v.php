@@ -48,10 +48,10 @@
                               <i class="fas fa-search-plus"></i>
                             </button>
                             <a href="<?php echo base_url('produk/update/' . $value->id_produk) ?>" class="btn btn-primary btn-sm">
-                              <i class="bx bx-edit"></i>
+                              <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                             <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#delete<?php echo $value->id_produk ?>">
-                              <i class="bx bx-trash"></i>
+                              <i class="fa-solid fa-trash"></i>
                             </button>
                           </td>
                         </tr>

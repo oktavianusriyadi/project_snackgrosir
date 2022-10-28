@@ -40,10 +40,10 @@
                               <i class="fas fa-search-plus"></i>
                             </button> -->
                             <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#update<?php echo $value->id_kategori ?>">
-                              <i class="bx bx-edit"></i>
+                              <i class="fa-solid fa-pen-to-square"></i>
                             </button>
                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#delete<?php echo $value->id_kategori ?>">
-                              <i class="bx bx-trash"></i>
+                              <i class="fa-solid fa-trash"></i>
                             </button>
                           </td>
                         </tr>

@@ -21,8 +21,8 @@
             echo form_open('Belanja/add');
             echo form_hidden('id', $detail->id_produk);
             echo form_hidden('price', $detail->harga);
-            // echo form_hidden('price', $detail->hargakg);
-            // echo form_hidden('price', $detail->hargabal);
+            echo form_hidden('price', $detail->hargakg);
+            echo form_hidden('price', $detail->hargabal);
             echo form_hidden('name', $detail->nama_produk);
             echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
             ?>
@@ -30,8 +30,8 @@
             <div class="row mb-3">
               <div class="col-md-12">
                 <button type="button" class="btn btnBerat btn-sm btn-outline-success" onclick="tampilharga('Rp <?php echo number_format($detail->harga, 0) ?>'); tampilukuran('500 Gram')">500 Gram</button>
-                <button type="button" class="btn btnBerat btn-sm btn-outline-success" onclick="tampilharga('Rp 195,000'); tampilukuran('1 Kg')">1 Kg</button>
-                <button type="button" class="btn btnBerat btn-sm btn-outline-success" onclick="tampilharga('Rp 950,000'); tampilukuran('Bal/Dus/Kaleng')">Bal/Dus</button>
+                <button type="button" class="btn btnBerat btn-sm btn-outline-success" onclick="tampilharga('Rp <?php echo number_format($detail->hargakg, 0)?>'); tampilukuran('1 Kg')">1 Kg</button>
+                <button type="button" class="btn btnBerat btn-sm btn-outline-success" onclick="tampilharga('Rp <?php echo number_format($detail->hargabal, 0) ?>'); tampilukuran('Bal/Dus/Kaleng')">Bal/Dus</button>
               </div>
             </div>
             <p class="detailPro">

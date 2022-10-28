@@ -195,9 +195,10 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
-.bx,
+.icon,
 .total {
   color: black;
+  font-size: xx-large;
 }
 
 .cardD:hover {

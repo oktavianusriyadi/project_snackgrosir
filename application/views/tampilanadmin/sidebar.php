@@ -20,8 +20,8 @@ $this->user_login->proteksi_hal();
 
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
-  <!-- Icons. Uncomment required icon fonts -->
-  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Box Icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- Fontawesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -95,7 +95,7 @@ $this->user_login->proteksi_hal();
           <!-- Kategori -->
           <li class="menu-item">
             <a href="<?php echo base_url('Kategori') ?>" class="menu-link">
-              <i class='menu-icon tf-icon bx bxs-category'></i>
+              <i class="menu-icon tf-icon fa-solid fa-cubes"></i>
               <div>Kategori Produk</div>
             </a>
           </li>
@@ -103,7 +103,7 @@ $this->user_login->proteksi_hal();
           <!-- Pesanan -->
           <li class="menu-item">
             <a href="<?php echo base_url('Pesanan') ?>" class="menu-link">
-              <i class='menu-icon tf-icon bx bx-package'></i>
+              <i class="menu-icon tf-icon fa-solid fa-truck-fast"></i>
               <div data-i18n="Form Elements">Data Pesanan</div>
             </a>
           </li>
@@ -111,15 +111,15 @@ $this->user_login->proteksi_hal();
           <!-- Produk -->
           <li class="menu-item">
             <a href="<?php echo base_url('Produk') ?>" class="menu-link">
-              <i class="menu-icon tf-icons bx bxs-package"></i>
+              <i class="menu-icon tf-icons fa-solid fa-cube"></i>
               <div>Data Produk</div>
             </a>
           </li>
 
           <!-- Berat -->
           <li class="menu-item">
-            <a href="<?php echo base_url('Admin/berat') ?>" class="menu-link">
-              <i class='menu-icon tf-icon bx bx-package'></i>
+            <a href="<?php echo base_url('Satuan') ?>" class="menu-link">
+              <i class="menu-icon tf-icon fa-solid fa-weight-hanging"></i>
               <div data-i18n="Form Elements">Data Berat</div>
             </a>
           </li>
@@ -127,7 +127,7 @@ $this->user_login->proteksi_hal();
           <!-- User -->
           <li class="menu-item">
             <a href="<?php echo base_url('User') ?>" class="menu-link">
-              <i class='menu-icon tf-icons bx bxs-user'></i>
+              <i class="menu-icon tf-icons fa-solid fa-user"></i>
               <div>Data User</div>
             </a>
           </li>
@@ -135,7 +135,7 @@ $this->user_login->proteksi_hal();
           <!-- Laporan -->
           <li class="menu-item">
             <a href="<?php echo base_url('Laporan') ?>" class="menu-link">
-              <i class='menu-icon tf-icon bx bxs-report'></i>
+              <i class="menu-icon tf-icon fa-solid fa-file"></i>
               <div data-i18n="Form Elements">Laporan</div>
             </a>
           </li>
@@ -143,18 +143,18 @@ $this->user_login->proteksi_hal();
           <!-- Setting -->
           <li class="menu-item">
             <a href="<?php echo base_url('Admin/setting') ?>" class="menu-link">
-              <i class='menu-icon tf-icon bx bxs-cog'></i>
+              <i class="menu-icon tf-icon fa-solid fa-gear"></i>
               <div data-i18n="Form Elements">Setting</div>
             </a>
           </li>
 
           <!-- Log Out -->
           <li class="menu-item">
-            <a href="<?php echo base_url('Admin/setting') ?>" class="menu-link">
-              <i class='menu-icon tf-icon bx bx-log-out'></i>
+            <a href="<?php echo base_url('Auth/logout') ?>" class="menu-link">
+              <i class="menu-icon tf-icon fa-solid fa-power-off"></i>
               <div data-i18n="Form Elements">Log Out</div>
               <div class="dropdown">
-                
+
               </div>
             </a>
           </li>

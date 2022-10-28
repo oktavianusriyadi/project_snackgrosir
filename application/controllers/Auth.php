@@ -22,7 +22,7 @@ class Auth extends CI_Controller
     $this->load->view('admin/Login_v');
   }
 
-  public function logout_admin()
+  public function logout()
   {
     $this->user_login->logout();
   }

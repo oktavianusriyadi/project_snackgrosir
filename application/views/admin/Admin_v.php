@@ -9,7 +9,7 @@
                     <div class="row">
                       <div class="col-4">
                         <div class="card-body">
-                          <i class="bx bx-package bx-lg mx-2 my-2"></i>
+                          <i class="fa-solid icon fa-truck-fast mx-2 my-3"></i>
                         </div>
                       </div>
                       <div class="col-8">
@@ -29,7 +29,7 @@
                     <div class="row">
                       <div class="col-4">
                         <div class="card-body">
-                          <i class="bx bxs-package bx-lg mx-2 my-2"></i>
+                          <i class="fa-solid icon fa-cube mx-2 my-3"></i>
                         </div>
                       </div>
                       <div class="col-8">
@@ -69,7 +69,7 @@
                     <div class="row">
                       <div class="col-4">
                         <div class="card-body">
-                          <i class="bx bxs-user-account bx-lg mx-2 my-2"></i>
+                          <i class="fa-solid icon fa-user mx-2 my-3"></i>
                         </div>
                       </div>
                       <div class="col-8">
@@ -89,7 +89,7 @@
                     <div class="row">
                       <div class="col-4">
                         <div class="card-body text-decoration-none">
-                          <i class="bx bxs-category bx-lg mx-2 my-2"></i>
+                          <i class="fa-solid icon fa-cubes mx-2 my-3"></i>
                         </div>
                       </div>
                       <div class="col-8">
