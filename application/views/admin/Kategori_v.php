@@ -69,7 +69,7 @@
                     <div class="mb-2">
                       <label class="form-label"><strong>Kategori Produk</strong></label>
                       <div class="input-group input-group-merge">
-                        <span class="input-group-text"><i class='bx bxs-category'></i></i></span>
+                        <span class="input-group-text"><i class='bx bxs-category'></i></span>
                         <input type="text" class="form-control" name="kategori" placeholder="Kategori Produk" required />
                       </div>
                     </div>
@@ -99,7 +99,7 @@
                       <div class="mb-2">
                         <label class="form-label"><strong>Kategori Produk</strong></label>
                         <div class="input-group input-group-merge">
-                          <span class="input-group-text"><i class="bx bx-user"></i></span>
+                          <span class="input-group-text"><i class='bx bxs-category'></i></span>
                           <input type="text" class="form-control" name="kategori" value="<?php echo $value->kategori ?>" placeholder="Kategori Produk" required />
                         </div>
                       </div>
