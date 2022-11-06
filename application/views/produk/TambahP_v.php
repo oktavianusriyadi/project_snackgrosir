@@ -42,18 +42,52 @@
                             </select>
                           </div>
                         </div>
+
+                        <!-- * -->
                         <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label"><strong>Berat (Gram)</strong></label>
+                          <label class="col-sm-2 col-form-label"><strong>Berat*</strong></label>
                           <div class="col-sm-10">
-                            <input class="form-control" type="number" min="0" name="berat" placeholder="Berat Eceran Produk (Gram)" value="<?php echo set_value('berat') ?>" />
+                            <input class="form-control" type="number" min="0" name="berat" placeholder="Isi dalam gram (100,1000, dst)" value="<?php echo set_value('berat') ?>" />
                           </div>
                         </div>
                         <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label"><strong>Harga</strong></label>
+                          <label class="col-sm-2 col-form-label"><strong>Harga*</strong></label>
                           <div class="col-sm-10">
                             <input class="form-control" name="harga" placeholder="Harga Produk" value="<?php echo set_value('harga') ?>" />
                           </div>
                         </div>
+                        <!-- // -->
+
+                        <!-- ** -->
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label"><strong>Berat**</strong></label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="number" min="0" name="beratkg" placeholder="Isi dalam gram (100,1000, dst)" value="<?php echo set_value('beratkg') ?>" />
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label"><strong>Harga**</strong></label>
+                          <div class="col-sm-10">
+                            <input class="form-control" name="hargakg" placeholder="Harga Produk" value="<?php echo set_value('hargakg') ?>" />
+                          </div>
+                        </div>
+                        <!-- // -->
+
+                        <!-- *** -->
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label"><strong>Berat***</strong></label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="number" min="0" name="beratbal" placeholder="Isi dalam gram (100,1000, dst)" value="<?php echo set_value('beratbal') ?>" />
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <label class="col-sm-2 col-form-label"><strong>Harga***</strong></label>
+                          <div class="col-sm-10">
+                            <input class="form-control" name="hargabal" placeholder="Harga Produk" value="<?php echo set_value('hargabal') ?>" />
+                          </div>
+                        </div>
+                        <!-- // -->
+
                         <div class="row mb-3">
                           <label class="col-sm-2 col-form-label"><strong>Deskripsi</strong></label>
                           <div class="col-sm-10">

@@ -7,6 +7,14 @@
                   <a href="<?php echo base_url('Produk/add') ?>" type="button" class="btn btn-primary mb-4">
                     Tambah
                   </a>
+                  <!-- Catatan -->
+                  <p class="text-black m-2">
+                    * = Kemasan 500 Gram<br>
+                    ** = Kemasan 1 Kilogram<br>
+                    *** = Bal/Dus/Kaleng
+                  </p>
+                  <!-- //Catatan -->
+
                 </div>
                 <div class="card-body">
                   <!-- Content -->
@@ -25,9 +33,12 @@
                         <th class="text-center">No</th>
                         <th class="text-center">Nama Produk</th>
                         <th class="text-center">Kategori</th>
-                        <th class="text-center">Berat</th>
-                        <th class="text-center">Harga</th>
-                        <th class="text-center">Gambar</th>
+                        <th class="text-center">Berat*</th>
+                        <th class="text-center">Harga*</th>
+                        <th class="text-center">Berat**</th>
+                        <th class="text-center">Harga**</th>
+                        <th class="text-center">Berat***</th>
+                        <th class="text-center">Harga***</th>
                         <th class="text-center">Action</th>
                       </tr>
                     </thead>
@@ -36,21 +47,19 @@
                       foreach ($produk as $key => $value) { ?>
                         <tr>
                           <td class="text-center"><?php echo $no++; ?></td>
-                          <td class="text-center"><?php echo $value->nama_produk ?></td>
-                          <td class="text-center"><?php echo $value->kategori ?></td>
-                          <td class="text-center"><?php echo $value->berat ?> Gr</td>
-                          <td class="text-center">Rp. <?php echo number_format($value->harga, 0) ?></td>
-                          <td class="text-center">
-                            <img src="<?php echo base_url('assets/imgcover/' . $value->gambar) ?>" width="100px">
-                          </td>
+                          <td><?php echo $value->nama_produk ?></td>
+                          <td><?php echo $value->kategori ?></td>
+                          <td><?php echo $value->berat ?></td>
+                          <td><?php echo number_format($value->harga, 0) ?></td>
+                          <td><?php echo $value->beratkg ?></td>
+                          <td><?php echo number_format($value->hargakg, 0) ?></td>
+                          <td><?php echo $value->beratbal ?></td>
+                          <td><?php echo number_format($value->hargabal, 0) ?></td>
                           <td>
-                            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#detail<?php echo $value->id_produk ?>">
-                              <i class="fas fa-search-plus"></i>
-                            </button>
-                            <a href="<?php echo base_url('produk/update/' . $value->id_produk) ?>" class="btn btn-primary btn-sm">
+                            <a class="btn btn-primary btn-xs" href="<?php echo base_url('produk/update/' . $value->id_produk) ?>">
                               <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#delete<?php echo $value->id_produk ?>">
+                            <button class="btn btn-secondary btn-xs" data-bs-toggle="modal" data-bs-target="#delete<?php echo $value->id_produk ?>">
                               <i class="fa-solid fa-trash"></i>
                             </button>
                           </td>
@@ -58,8 +67,8 @@
                       <?php }  ?>
                     </tbody>
                   </table>
+                  <!-- / Content -->
                 </div>
-                <!-- / Content -->
               </div>
             </div>
 

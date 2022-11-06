@@ -48,7 +48,7 @@
                   <h6 class="card-title nampro mb-1 text-center"><?php echo $value->nama_produk ?></h6>
                   <p></p>
                   <section class="text-center">
-                    <h5 class="harga">Rp <?php echo number_format($value->harga, 0) ?></h5>
+                    <h5 class="harga">Rp <?php echo number_format($value->harga, 0) ?> - Rp <?php echo number_format($value->hargabal, 0) ?></h5>
                   </section>
                 </div>
                 <div class="card-body text-center">

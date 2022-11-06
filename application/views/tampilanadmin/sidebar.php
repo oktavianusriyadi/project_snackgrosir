@@ -116,14 +116,6 @@ $this->user_login->proteksi_hal();
             </a>
           </li>
 
-          <!-- Berat -->
-          <li class="menu-item">
-            <a href="<?php echo base_url('Satuan') ?>" class="menu-link">
-              <i class="menu-icon tf-icon fa-solid fa-weight-hanging"></i>
-              <div data-i18n="Form Elements">Data Berat</div>
-            </a>
-          </li>
-
           <!-- User -->
           <li class="menu-item">
             <a href="<?php echo base_url('User') ?>" class="menu-link">

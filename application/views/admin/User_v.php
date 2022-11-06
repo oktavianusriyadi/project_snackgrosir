@@ -41,10 +41,10 @@
                             <!-- <button class="btn btn-secondary btn-sm">
                               <i class="fas fa-search-plus"></i>
                             </button> -->
-                            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#update<?php echo $value->id_user ?>">
+                            <button class="btn btn-success btn-xs" data-bs-toggle="modal" data-bs-target="#update<?php echo $value->id_user ?>">
                               <i class="fa-solid fa-pen-to-square"></i>
                             </button>
-                            <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#delete<?php echo $value->id_user ?>">
+                            <button class="btn btn-secondary btn-xs" data-bs-toggle="modal" data-bs-target="#delete<?php echo $value->id_user ?>">
                               <i class="fa-solid fa-trash"></i>
                             </button>
                           </td>
