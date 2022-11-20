@@ -45,45 +45,15 @@
 
                         <!-- * -->
                         <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label"><strong>Berat*</strong></label>
+                          <label class="col-sm-2 col-form-label"><strong>Berat</strong></label>
                           <div class="col-sm-10">
                             <input class="form-control" type="number" name="berat" value="<?php echo $produk->berat ?>" />
                           </div>
                         </div>
                         <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label"><strong>Harga*</strong></label>
+                          <label class="col-sm-2 col-form-label"><strong>Harga</strong></label>
                           <div class="col-sm-10">
                             <input class="form-control" name="harga" placeholder="Harga Produk" value="<?php echo $produk->harga ?>" />
-                          </div>
-                        </div>
-                        <!-- // -->
-
-                        <!-- ** -->
-                        <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label"><strong>Berat**</strong></label>
-                          <div class="col-sm-10">
-                            <input class="form-control" type="number" name="beratkg" value="<?php echo $produk->beratkg ?>" />
-                          </div>
-                        </div>
-                        <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label"><strong>Harga**</strong></label>
-                          <div class="col-sm-10">
-                            <input class="form-control" name="hargakg" placeholder="Harga Produk" value="<?php echo $produk->hargakg ?>" />
-                          </div>
-                        </div>
-                        <!-- // -->
-
-                        <!-- *** -->
-                        <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label"><strong>Berat***</strong></label>
-                          <div class="col-sm-10">
-                            <input class="form-control" type="number" name="beratbal" value="<?php echo $produk->beratbal ?>" />
-                          </div>
-                        </div>
-                        <div class="row mb-3">
-                          <label class="col-sm-2 col-form-label"><strong>Harga***</strong></label>
-                          <div class="col-sm-10">
-                            <input class="form-control" name="hargabal" placeholder="Harga Produk" value="<?php echo $produk->hargabal ?>" />
                           </div>
                         </div>
                         <!-- // -->

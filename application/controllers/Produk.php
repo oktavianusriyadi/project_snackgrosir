@@ -52,10 +52,6 @@ class Produk extends CI_Controller
           'id_kategori' => $this->input->post('id_kategori'),
           'berat' => $this->input->post('berat'),
           'harga' => $this->input->post('harga'),
-          'beratkg' => $this->input->post('beratkg'),
-          'hargakg' => $this->input->post('hargakg'),
-          'beratbal' => $this->input->post('beratbal'),
-          'hargabal' => $this->input->post('hargabal'),
           'deskripsi' => $this->input->post('deskripsi'),
           'gambar' => $upload_data['uploads']['file_name'],
         );
@@ -108,10 +104,6 @@ class Produk extends CI_Controller
           'id_kategori' => $this->input->post('id_kategori'),
           'berat' => $this->input->post('berat'),
           'harga' => $this->input->post('harga'),
-          'beratkg' => $this->input->post('beratkg'),
-          'hargakg' => $this->input->post('hargakg'),
-          'beratbal' => $this->input->post('beratbal'),
-          'hargabal' => $this->input->post('hargabal'),
           'deskripsi' => $this->input->post('deskripsi'),
           'gambar' => $upload_data['uploads']['file_name'],
         );
@@ -126,10 +118,6 @@ class Produk extends CI_Controller
         'id_kategori' => $this->input->post('id_kategori'),
         'berat' => $this->input->post('berat'),
         'harga' => $this->input->post('harga'),
-        'beratkg' => $this->input->post('beratkg'),
-        'hargakg' => $this->input->post('hargakg'),
-        'beratbal' => $this->input->post('beratbal'),
-        'hargabal' => $this->input->post('hargabal'),
         'deskripsi' => $this->input->post('deskripsi'),
       );
       $this->Produk_m->update($data);

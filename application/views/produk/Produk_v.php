@@ -7,14 +7,6 @@
                   <a href="<?php echo base_url('Produk/add') ?>" type="button" class="btn btn-primary mb-4">
                     Tambah
                   </a>
-                  <!-- Catatan -->
-                  <p class="text-black m-2">
-                    * = Kemasan 500 Gram<br>
-                    ** = Kemasan 1 Kilogram<br>
-                    *** = Bal/Dus/Kaleng
-                  </p>
-                  <!-- //Catatan -->
-
                 </div>
                 <div class="card-body">
                   <!-- Content -->
@@ -33,12 +25,8 @@
                         <th class="text-center">No</th>
                         <th class="text-center">Nama Produk</th>
                         <th class="text-center">Kategori</th>
-                        <th class="text-center">Berat*</th>
-                        <th class="text-center">Harga*</th>
-                        <th class="text-center">Berat**</th>
-                        <th class="text-center">Harga**</th>
-                        <th class="text-center">Berat***</th>
-                        <th class="text-center">Harga***</th>
+                        <th class="text-center">Berat</th>
+                        <th class="text-center">Harga</th>
                         <th class="text-center">Action</th>
                       </tr>
                     </thead>
@@ -51,11 +39,10 @@
                           <td><?php echo $value->kategori ?></td>
                           <td><?php echo $value->berat ?></td>
                           <td><?php echo number_format($value->harga, 0) ?></td>
-                          <td><?php echo $value->beratkg ?></td>
-                          <td><?php echo number_format($value->hargakg, 0) ?></td>
-                          <td><?php echo $value->beratbal ?></td>
-                          <td><?php echo number_format($value->hargabal, 0) ?></td>
                           <td>
+                            <button class="btn btn-secondary btn-xs" data-bs-toggle="modal" data-bs-target="#detail<?php echo $value->id_produk ?>">
+                              <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
                             <a class="btn btn-primary btn-xs" href="<?php echo base_url('produk/update/' . $value->id_produk) ?>">
                               <i class="fa-solid fa-pen-to-square"></i>
                             </a>
