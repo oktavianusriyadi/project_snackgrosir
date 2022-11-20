@@ -40,7 +40,7 @@
                           <td><?php echo $value->berat ?></td>
                           <td><?php echo number_format($value->harga, 0) ?></td>
                           <td>
-                            <button class="btn btn-secondary btn-xs" data-bs-toggle="modal" data-bs-target="#detail<?php echo $value->id_produk ?>">
+                            <button class="btn btn-warning btn-xs" data-bs-toggle="modal" data-bs-target="#detail<?php echo $value->id_produk ?>">
                               <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                             <a class="btn btn-primary btn-xs" href="<?php echo base_url('produk/update/' . $value->id_produk) ?>">
