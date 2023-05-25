@@ -8,7 +8,7 @@
       </a>
     </div>
 
-    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+    <div class="navbar-nav-right d-flex align-items-center">
       <!-- <div class="app-brand-text demo menu-text fw-bolder text-black">Snack Grosir Pontianak</div> -->
       <!-- Search -->
       <!-- <div class="navbar-nav align-items-center">
